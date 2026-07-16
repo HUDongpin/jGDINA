@@ -38,3 +38,4 @@ For tatsuoka1990-dina, `personparm()`'s random tie selection yields 59.51% / 60.
 From the repository root, run `npm run accept:real-data`. The command rebuilds jGDINA, recompiles the frozen R kernel, regenerates the reference, compares every field and exits nonzero on any failed gate.
 
 To repeat the optional installed-package audit, set `JGDINA_R_LIB=/tmp/jgdina-r-lib` and `R_MAKEVARS_USER=/tmp/jgdina-Makevars`, then run `npm run accept:full-package`. This audit is intentionally not part of the dependency-light CI gate.
+
