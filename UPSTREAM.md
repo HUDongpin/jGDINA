@@ -9,8 +9,20 @@ jGDINA v1 is validated against the following frozen upstream implementation:
 - Local snapshot: `GDINA-master/`
 - Upstream license: GPL-3
 
-The downloaded tree was compared byte-for-byte at the file level with the
-GitHub archive for this commit using `diff -qr`; no differences were reported.
+The downloaded tree was previously compared byte-for-byte at the file level
+with the GitHub archive for this commit using `diff -qr`; no differences were
+reported. The downloaded directory does not contain upstream `.git` metadata,
+so that remote commit mapping is a recorded provenance fact rather than
+something an offline checkout can independently derive.
+
+The current local snapshot itself is fully and reproducibly pinned in
+[`validation/upstream-snapshot.json`](./validation/upstream-snapshot.json).
+That manifest records every tracked file's byte length and SHA-256 plus one
+aggregate tree hash. Verify it without contacting GitHub:
+
+```sh
+node validation/upstream-snapshot.mjs --check
+```
 
 ## Compatibility target
 

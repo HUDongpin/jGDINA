@@ -22,7 +22,13 @@ No changes yet.
 - ECPE and Tatsuoka real-data acceptance gates, a complete installed-package
   wrapper audit, and a browser-verified technical acceptance report.
 - Seven separately packable GPL-3.0-only packages with frozen upstream
-  provenance, cancellation, structured errors, tests, and examples.
+  provenance, complete preferred TypeScript source, standalone pinned rebuild
+  controls, cancellation, structured errors, tests, and examples.
+- A retained local offline RC bundle with deterministic package metadata,
+  source/lock/toolchain provenance, a clean-commit gate, SHA-256 sums,
+  repeated-pack and source-rebuild reproducibility checks, tree-shaken
+  side-effect checks, clean-cache installed runtime smokes, and fixed-tarball
+  Next 16 production browser E2E.
 - Node 20/22/24 CI, independent oracle verification, Next.js 16 production
   builds, dependency audits, and installed-tarball release smoke tests.
 - API, R-migration, Next.js production, statistical-responsibility, and v1.1

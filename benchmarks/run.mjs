@@ -1,5 +1,6 @@
 import { performance } from "node:perf_hooks";
 import { resourceUsage } from "node:process";
+import { readFile } from "node:fs/promises";
 import {
   DEFAULT_RESOURCE_LIMITS,
   estimateFitMemory,
@@ -8,13 +9,27 @@ import {
   validateFitInput,
 } from "../packages/jgdina/dist/index.js";
 
+const definitions = JSON.parse(
+  await readFile(new URL("../fixtures/v1/benchmark-cases.json", import.meta.url), "utf8"),
+);
+const localData = JSON.parse(
+  await readFile(new URL("./data/local-cases.json", import.meta.url), "utf8"),
+);
+const localCases = new Map(localData.cases.map((testCase) => [testCase.id, testCase]));
 const CASES = Object.freeze({
-  smoke: { n: 512, j: 12, k: 4 },
-  "local-sim10gdina": { n: 1_000, j: 10, k: 3 },
-  "local-sim30gdina": { n: 1_000, j: 30, k: 5 },
-  "browser-stress": { n: 3_000, j: 30, k: 10 },
-  "node-stress": { n: 10_000, j: 50, k: 12 },
-  "browser-memory-preflight-k15": { n: 3_000, j: 30, k: 15, preflightOnly: true },
+  smoke: { n: 512, j: 12, k: 4, source: "synthetic-definition" },
+  ...Object.fromEntries(
+    definitions.cases.map((definition) => [
+      definition.id,
+      {
+        n: definition.n,
+        j: definition.j,
+        k: definition.k,
+        source: definition.source,
+        preflightOnly: definition.execution === "preflight-only",
+      },
+    ]),
+  ),
 });
 
 const options = parseArguments(process.argv.slice(2));
@@ -23,8 +38,9 @@ if (shape === undefined) {
   throw new Error(`Unknown case '${options.caseId}'. Choose: ${Object.keys(CASES).join(", ")}`);
 }
 
-const input = syntheticInput(shape, options.posteriorStorage);
-const validated = validateFitInput(input);
+const input = shape.source === "synthetic-definition"
+  ? syntheticInput(shape, options.posteriorStorage)
+  : localInput(options.caseId, shape, options.posteriorStorage);
 if (shape.preflightOnly === true || options.preflightOnly) {
   const reducedClassCounts = input.qMatrix.map(
     (row) => 2 ** row.reduce((sum, value) => sum + value, 0),
@@ -51,13 +67,15 @@ if (shape.preflightOnly === true || options.preflightOnly) {
     `${JSON.stringify({
       caseId: options.caseId,
       execution: "preflight-only",
-      dimensions: validated.dimensions,
+      dimensions: estimates.full.dimensions,
       defaultLimitBytes: DEFAULT_RESOURCE_LIMITS.maxEstimatedBytes,
       estimates,
     }, null, 2)}\n`,
   );
   process.exit(0);
 }
+
+const validated = validateFitInput(input);
 
 for (let run = 0; run < options.warmups; run += 1) await fit(input);
 
@@ -73,6 +91,9 @@ for (let run = 0; run < options.runs; run += 1) {
     rssDeltaBytes: afterRss - beforeRss,
     maxResidentBytes: resourceUsage().maxRSS * 1024,
     iterations: result.convergence.iterations,
+    converged: result.convergence.converged,
+    convergenceReason: result.convergence.reason,
+    finalChange: result.convergence.finalChange,
     finalLogLikelihood: result.statistics.logLikelihood,
   });
 }
@@ -152,6 +173,35 @@ function syntheticInput(shape, posteriorStorage) {
     model: "GDINA",
     estimation: {
       maxIterations: 500,
+      convergenceTolerance: 1e-5,
+      posteriorStorage,
+      initialization: { starts: 1, seed: 123_456 },
+    },
+  };
+}
+
+function localInput(caseId, shape, posteriorStorage) {
+  const testCase = localCases.get(caseId);
+  if (testCase === undefined) {
+    throw new Error(
+      `Local benchmark '${caseId}' has no serialized input. ` +
+      "Run Rscript benchmarks/generate-local-data.R.",
+    );
+  }
+  if (
+    testCase.source !== shape.source ||
+    testCase.dimensions.respondents !== shape.n ||
+    testCase.dimensions.items !== shape.j ||
+    testCase.dimensions.attributes !== shape.k
+  ) {
+    throw new Error(`Local benchmark '${caseId}' disagrees with benchmark-cases.json.`);
+  }
+  return {
+    responses: testCase.responses,
+    qMatrix: testCase.q_matrix,
+    model: testCase.model,
+    estimation: {
+      maxIterations: 2_000,
       convergenceTolerance: 1e-5,
       posteriorStorage,
       initialization: { starts: 1, seed: 123_456 },

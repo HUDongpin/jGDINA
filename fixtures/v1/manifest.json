@@ -15,10 +15,10 @@
     "GDINA-master/src/Lik.cpp": "43b5624719fd74a68547eef5229e9ba4",
     "GDINA-master/src/Lik2.cpp": "2402cd43bc7142cba8f48ea9684b91d2",
     "GDINA-master/src/util.cpp": "b0a2f07b67d501a77ce2b17270920508",
-    "validation/generate-fixtures.R": "f705f916d038020717836fcea9ab18b9",
+    "validation/generate-fixtures.R": "5f52b44cb9d04e4facc7a31afbde80cf",
     "validation/validate-fixtures.R": "b2ffc6ddf4a2b2878b2cfe92868b27fb",
     "validation/compare-fast-kernel.R": "72d6035afdc3317770133df0b71a17a6",
-    "validation/README.md": "a897616e32742eb987e93814ede0d067"
+    "validation/README.md": "c09b114c6501e42846bbe2a71013cc1d"
   },
   "fixture_md5": {
     "fixed-likelihood-posterior.json": "a717fefc977b1efe8a7bed4588331c2b",
@@ -30,6 +30,6 @@
     "em-gdina-saturated-missing.json": "a07388e3419d5e94532e33ac154588b0",
     "row-aggregation-equivalence.json": "e9b01a207601825994693c46e4547e8e",
     "deterministic-multistart-dina.json": "8aae3fb09a32ccf16be749fb2d31a7b7",
-    "benchmark-cases.json": "8fb2e0ebbd6e909259959de8bb8f4c5e"
+    "benchmark-cases.json": "b1cea08a12e9775b956f3475a109be00"
   }
 }

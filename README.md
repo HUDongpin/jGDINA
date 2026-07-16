@@ -31,7 +31,7 @@ jGDINA v1 supports:
 - estimated saturated or fixed latent-class proportions;
 - `null` or `NaN` missing responses;
 - supplied starting parameters or seeded deterministic multiple starts;
-- stable, row-aggregated, block-wise EM estimation;
+- stable, row-aggregated EM with a row-wise streaming E-step;
 - full posterior probabilities or memory-saving score-only mode;
 - item/group/class probabilities and delta parameters;
 - log likelihood, deviance, AIC, AICc, BIC, CAIC, and sample-adjusted BIC;
@@ -234,12 +234,25 @@ scores, posterior, and serialization costs.
 ## Verification
 
 ```sh
-npm install
+npm ci
 npm run verify
 npm run accept:real-data
 npm run benchmark -- --case smoke
 Rscript validation/compare-fast-kernel.R
+npm run release:bundle -- 1.0.0-rc.1
 ```
+
+`release:bundle` retains all seven candidate tarballs plus a deterministic
+manifest, fixed-tarball Next production evidence, and `SHA256SUMS` under
+`.release/<version>/`. It verifies packed preferred source and byte-identical
+source rebuilds, installs all seven tarballs with an empty npm cache in forced
+offline mode, and runs ESM, CommonJS, direct-fit, Node-worker, and tree-shaking
+smokes. A second temporary lock installs the fixed app tarballs plus committed
+Next dependencies from a prewarmed cache in forced-offline mode for the Next 16
+browser E2E. A formal bundle requires a clean local commit and
+records its Git/tree, lockfile hashes, toolchain, and unused tag target. It does
+not use GitHub, create a tag, or publish to npm; see the
+[release-candidate runbook](./scripts/release/README.md).
 
 The independent base-R oracle generates nine versioned fixtures. The optional
 compiled comparison matches the upstream fast C++ kernel's iteration counts and

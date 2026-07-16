@@ -52,6 +52,8 @@ jobs:
         run: npm run build
       - name: Exercise direct, ESM, CommonJS, isolated, and pooled runtimes
         run: npm run verify:runtime
+      - name: Verify the frozen upstream source snapshot
+        run: npm run verify:upstream
 
   r-oracle:
     name: Independent R oracle
@@ -109,9 +111,11 @@ jobs:
         run: npm ci
       - name: Recompile the frozen kernel and compare real datasets
         run: npm run accept:real-data
+      - name: Re-export the frozen benchmark inputs byte-for-byte
+        run: npm run benchmark:data:verify
 
   next-production:
-    name: Next.js 16 production build
+    name: Next.js 16 production browser smoke
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -138,6 +142,10 @@ jobs:
         run: npm run typecheck --prefix examples/next-app
       - name: Create Next.js production build
         run: npm run build --prefix examples/next-app
+      - name: Install the Playwright CLI browser
+        run: npm run smoke:next-production:install-browser
+      - name: Exercise Node Route Handler and browser Worker production paths
+        run: npm run smoke:next-production
 
   dependency-audit:
     name: npm dependency audit

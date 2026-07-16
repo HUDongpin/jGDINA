@@ -42,7 +42,9 @@ The public backend is available as `jsBackend` or via `createJsBackend()`.
 `evaluateValidated()` evaluates supplied parameters without fitting for golden
 likelihood and posterior fixtures.
 
-Numerical implementation evidence, equations, and tolerances are documented in
-the source repository's [validation guide](../../validation/README.md). The
-[statistical-responsibility guide](../../docs/statistical-responsibility.md)
-explains why numerical parity and convergence are not model-fit evidence.
+Numerical parity and convergence are not evidence of substantive model fit.
+The complete local jGDINA workspace contains the validation and statistical
+responsibility evidence. This archive includes the preferred TypeScript source
+and exact package-local rebuild procedure in [SOURCE.md](./SOURCE.md),
+compatibility provenance in [UPSTREAM.md](./UPSTREAM.md), and the
+[GPL-3.0-only license](./LICENSE) with [NOTICE](./NOTICE).

@@ -13,7 +13,10 @@
   },
   "scripts": {
     "accept:full-package": "Rscript validation/real-data/compare-full-package.R",
+    "accept:next-production": "npm run build && npm ci --prefix examples/next-app && npm run typecheck --prefix examples/next-app && npm run build --prefix examples/next-app && npm run smoke:next-production",
     "accept:real-data": "npm run build && Rscript validation/real-data/generate-reference.R && node validation/real-data/compare.mjs",
+    "benchmark:data:generate": "Rscript benchmarks/generate-local-data.R",
+    "benchmark:data:verify": "node benchmarks/verify-local-data.mjs",
     "build": "npm run build --workspaces --if-present",
     "benchmark": "npm run build && node benchmarks/run.mjs",
     "ci:node": "npm run typecheck && npm test && npm run build && npm run verify:runtime",
@@ -21,14 +24,20 @@
     "oracle": "Rscript validation/validate-fixtures.R",
     "oracle:generate": "Rscript validation/generate-fixtures.R",
     "release:check": "node scripts/release/dry-run.mjs",
+    "release:bundle": "node scripts/release/bundle.mjs",
     "release:pack-smoke": "node scripts/release/dry-run.mjs --skip-git",
+    "smoke:next-production": "node scripts/next-production-smoke.mjs",
+    "smoke:next-production:install-browser": "playwright-cli install-browser chromium",
     "test": "npm run test --workspaces --if-present",
     "test:watch": "vitest",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "verify:runtime": "node validation/runtime-smoke.mjs",
-    "verify": "npm run ci:node && npm run oracle"
+    "verify:upstream": "node validation/upstream-snapshot.mjs --check",
+    "verify:evidence": "npm run verify:upstream && npm run benchmark:data:verify",
+    "verify": "npm run ci:node && npm run verify:evidence && npm run oracle"
   },
   "devDependencies": {
+    "@playwright/cli": "0.1.17",
     "@types/node": "^26.1.1",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",

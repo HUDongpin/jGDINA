@@ -23,9 +23,7 @@ to move fitting into a worker. The v1 scope is binary responses/attributes,
 one group, GDINA/DINA/DINO items, saturated or fixed class priors, missing
 responses, and deterministic starts.
 
-The compatibility target and provenance are packaged in `UPSTREAM.md`.
-License: GPL-3.0-only; see `LICENSE` and `NOTICE`.
-
-Source-repository guides: [complete API and result fields](../../docs/api-reference.md),
-[R migration](../../docs/migration-from-r.md), and
-[statistical responsibility](../../docs/statistical-responsibility.md).
+The compatibility target and provenance are packaged in
+[UPSTREAM.md](./UPSTREAM.md). License: GPL-3.0-only; see
+[LICENSE](./LICENSE) and [NOTICE](./NOTICE). The preferred TypeScript source
+and exact package-local rebuild procedure are in [SOURCE.md](./SOURCE.md).

@@ -1,0 +1,2762 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "validation/upstream-snapshot.mjs",
+  "algorithm": "sha256(path UTF-8 + NUL + decimal byte length + NUL + file SHA-256 ASCII + LF), sorted by raw UTF-8 path bytes",
+  "upstream": {
+    "project": "Wenchao-Ma/GDINA",
+    "version": "2.12.3",
+    "date": "2026-07-10",
+    "recordedCommit": "ac5eca223a1ee32b6c2f595cfeaef9b330451425",
+    "localRoot": "GDINA-master/"
+  },
+  "fileCount": 549,
+  "totalBytes": 9624407,
+  "treeSha256": "22c560cd3d1839ee2803a74923af9e34154cd2f6bc2294a2482392aa90247008",
+  "files": [
+    {
+      "path": "GDINA-master/.Rbuildignore",
+      "bytes": 206,
+      "sha256": "93acdc4de37ad1018a3ef82fe7fbc3b8842cbfc4c0392381eb28ae307d17638d"
+    },
+    {
+      "path": "GDINA-master/.github/.gitignore",
+      "bytes": 7,
+      "sha256": "d602bbe856ef80e101210868601c19d9f27ab76e0994b2437e711542d8cbe835"
+    },
+    {
+      "path": "GDINA-master/.github/workflows/R-CMD-check.yaml",
+      "bytes": 1402,
+      "sha256": "f56fa8d2be7fbf2d7769d0a5d48399a083b4686cd20b640427bfd43600041c0f"
+    },
+    {
+      "path": "GDINA-master/.github/workflows/pages.yml",
+      "bytes": 764,
+      "sha256": "3a3b89122260df46fc9b2e8c1ba8a895c3bce03893f5131182809f796113a3cc"
+    },
+    {
+      "path": "GDINA-master/.gitignore",
+      "bytes": 207,
+      "sha256": "90e09b927e84c8cac0c4de08b898b2578ef8258f2c1d77f691cfe9c00ad6a63b"
+    },
+    {
+      "path": "GDINA-master/DESCRIPTION",
+      "bytes": 3228,
+      "sha256": "86d7b9d31235cd2e95fcf58ab8076f845cdfd4d588761b6d219e4ba17ee04776"
+    },
+    {
+      "path": "GDINA-master/GDINA.Rproj",
+      "bytes": 438,
+      "sha256": "bcfa0b69a69363c04c96f10903c0ec7521318729b13f36928b736cae1dd9d0f7"
+    },
+    {
+      "path": "GDINA-master/NAMESPACE",
+      "bytes": 2538,
+      "sha256": "18fde9145443ac48b9acaac47d37b6b250039d05ffc6fb315b8da0dab85cb040"
+    },
+    {
+      "path": "GDINA-master/NEWS.md",
+      "bytes": 9217,
+      "sha256": "1fbba58a84902bc94fa4c11d2f3d7c557b2bad98487008a6d2bb77ddc78aee16"
+    },
+    {
+      "path": "GDINA-master/R/CA.R",
+      "bytes": 3020,
+      "sha256": "6d271287ddfd00302c6396653cfe76360ee18b95dccd248fbd18fbe13d161b7f"
+    },
+    {
+      "path": "GDINA-master/R/CM.R",
+      "bytes": 4265,
+      "sha256": "863cb1d18dda02f0a40f1546ea69abf28c70f49643bca8fc4ce45f51d025fc3b"
+    },
+    {
+      "path": "GDINA-master/R/CR.R",
+      "bytes": 1859,
+      "sha256": "60cdf28d7430f3fc184b2eb5607a4af3d9a8fda5e4b92cbdc58b09052feb5493"
+    },
+    {
+      "path": "GDINA-master/R/DTM.R",
+      "bytes": 7592,
+      "sha256": "12347ad6768bf216023f119f51b83d384b14625dbe6efae3e3e83685299111da"
+    },
+    {
+      "path": "GDINA-master/R/ExportedFuncs.R",
+      "bytes": 14318,
+      "sha256": "36fed281ae80835372746d7f19b5145b9a1509e1609796f49ef4991e2525fc94"
+    },
+    {
+      "path": "GDINA-master/R/GDI.R",
+      "bytes": 25064,
+      "sha256": "c01dc681f23f4d292af074a6a93c987147b82aaabab6a921a5b4eae8d52953eb"
+    },
+    {
+      "path": "GDINA-master/R/GDINA-package.R",
+      "bytes": 8779,
+      "sha256": "b376d6360b5eb3781b218b1940166c36b206500eef2d36d8bd5e056bfba04162"
+    },
+    {
+      "path": "GDINA-master/R/GDINA.R",
+      "bytes": 49214,
+      "sha256": "3eaf3dc98e5020bbcd647196f5e1c21c555562add8cc371fc94a3ad4b5f7cd5f"
+    },
+    {
+      "path": "GDINA-master/R/GMSCDM.R",
+      "bytes": 13222,
+      "sha256": "96b72345f75771d75fd7628fa050a07c274bd701204b55de0a02735138e419a8"
+    },
+    {
+      "path": "GDINA-master/R/HO.R",
+      "bytes": 11522,
+      "sha256": "c25feeec2abb27bc4c4be1669219eaad04d642cc566466c7c22a103b14487e4b"
+    },
+    {
+      "path": "GDINA-master/R/ILCA.R",
+      "bytes": 4319,
+      "sha256": "bb2bc93955dbcfd9b3266e081b743c1f781b7d9f0281f47722b50b7c9dc2a8ff"
+    },
+    {
+      "path": "GDINA-master/R/M2.R",
+      "bytes": 11737,
+      "sha256": "88854953cea2539fb2e4885476178a59c4b80ffd3d6167e64c20ebdab3f44a9e"
+    },
+    {
+      "path": "GDINA-master/R/MCmodel.R",
+      "bytes": 15130,
+      "sha256": "df2345e751d615fc364f342c9f71048b0f3297c16c355edf5fdc40a6947ac137"
+    },
+    {
+      "path": "GDINA-master/R/Mstep.R",
+      "bytes": 16100,
+      "sha256": "8d694e9fb94dbbba708b9e1825ea3231afe8c812f1828a3257c8c892302d51b3"
+    },
+    {
+      "path": "GDINA-master/R/Mstep_DTM.R",
+      "bytes": 6428,
+      "sha256": "f62beeb738e194053e773c56d7fdc77f872906acbbc416f88e71d569c95c6868"
+    },
+    {
+      "path": "GDINA-master/R/MultipleGroup_Estimation.R",
+      "bytes": 16900,
+      "sha256": "c5f9084bc89d31ec39a8108fb0cd7887cf1bf31ec04c10701fee7c3e8b61766b"
+    },
+    {
+      "path": "GDINA-master/R/RcppExports.R",
+      "bytes": 7392,
+      "sha256": "10482048aebf3d28854a9b189222d1808eeb109893795dfa40b1f2122ef6dc0e"
+    },
+    {
+      "path": "GDINA-master/R/SingleGroup_Estimation.R",
+      "bytes": 16202,
+      "sha256": "16b521e106e0252ea6c6481c3349d17b2f6f989b6fd2892f57501c3cf98bcc36"
+    },
+    {
+      "path": "GDINA-master/R/anova.GDINA.R",
+      "bytes": 1754,
+      "sha256": "9adf15b46c86053705a911d5d8b98545896d2c99cbc6a6a8acff5bc7239c1a25"
+    },
+    {
+      "path": "GDINA-master/R/autoGDINA.R",
+      "bytes": 9207,
+      "sha256": "6fc31acc54e0dbf5c7e8e15e2b9b37c6112cf3f8b86e769dba0737f6b6453f96"
+    },
+    {
+      "path": "GDINA-master/R/bootSE.R",
+      "bytes": 4809,
+      "sha256": "a25ba2d05611a017adbb94f7242a89e6f0de506f7d588c44e253afa6ed8f722a"
+    },
+    {
+      "path": "GDINA-master/R/coef.R",
+      "bytes": 5292,
+      "sha256": "f95251b4126c909c0269f892d603c52b7bbea864d9cc3a3e98c5fd22609e9f70"
+    },
+    {
+      "path": "GDINA-master/R/dif.R",
+      "bytes": 26791,
+      "sha256": "df89d8409989bb0da62455b31deda643389c2dbc22570c9ed323f2be8cd3a078"
+    },
+    {
+      "path": "GDINA-master/R/estimation_utils.R",
+      "bytes": 8483,
+      "sha256": "3345d6f7a41277841c9589bbe9ef8facf8c00a59c1725738920faac66de07b34"
+    },
+    {
+      "path": "GDINA-master/R/extract.R",
+      "bytes": 19286,
+      "sha256": "c557eb05106ce32162cd3aee8ed49eb4f054cbca4dafd219afd7bed44f914fca"
+    },
+    {
+      "path": "GDINA-master/R/itemfit.R",
+      "bytes": 10350,
+      "sha256": "14c4088c0e567f9abc30072dc2ee772d21a76a3468c01b143b17a5c48bf28ebb"
+    },
+    {
+      "path": "GDINA-master/R/itemfitPD.R",
+      "bytes": 10949,
+      "sha256": "6f60a802e3414f42fd47d1ca392fa86f2969264f1b5d3a3611dab8818483f658"
+    },
+    {
+      "path": "GDINA-master/R/itemparm.GDINA.R",
+      "bytes": 1557,
+      "sha256": "11ea81791eadb59552cdc72693b0d655d23dab64efdc4bf34b0eceadf4db0b1f"
+    },
+    {
+      "path": "GDINA-master/R/modelcomp.R",
+      "bytes": 21008,
+      "sha256": "8f804b8dd7cccfcea410ce4f21b9ea93227ada51eb4f86259a428af5ce0e0121"
+    },
+    {
+      "path": "GDINA-master/R/monocheck.R",
+      "bytes": 1311,
+      "sha256": "5dff1e5fa427d2e3d5daca60047051372ea745bf582784a565c76ff130942d84"
+    },
+    {
+      "path": "GDINA-master/R/pairwiseDIF.R",
+      "bytes": 9435,
+      "sha256": "53bd4c25797c883746ba89a83398505d031f912ca23bb85f6dadb38c2d152e7c"
+    },
+    {
+      "path": "GDINA-master/R/personparm.GDINA.R",
+      "bytes": 8155,
+      "sha256": "d37d04ce8620c61d2631dd6b2f580957b7795e8fb4ecf301763311be12f9bcb2"
+    },
+    {
+      "path": "GDINA-master/R/plotIRF.GDINA.R",
+      "bytes": 16736,
+      "sha256": "65c459d411df8d16eb5116346260a58dc425b37bc293ba297648efd18784093a"
+    },
+    {
+      "path": "GDINA-master/R/print.GDINA.R",
+      "bytes": 16914,
+      "sha256": "d9356251a215d7a26f03665f61e9a53829e7aef140c828be6a44a88d0c033e55"
+    },
+    {
+      "path": "GDINA-master/R/realdata_ECPE.R",
+      "bytes": 2454,
+      "sha256": "d5536e40a271e175012c6f4005fa03ca41517ad1fb98911a7fd9982d0adba5d4"
+    },
+    {
+      "path": "GDINA-master/R/realdata_Tatsuoka1990.R",
+      "bytes": 1381,
+      "sha256": "14ffbd75cfaff6cee551d0f400a31e0c95df4eed69ea7edc14b07ddf4414a281"
+    },
+    {
+      "path": "GDINA-master/R/s3GDINA.R",
+      "bytes": 3529,
+      "sha256": "39f1c5cf20c2a7e535f512c39956feb54328830d32fc37868180767471f1f938"
+    },
+    {
+      "path": "GDINA-master/R/score.R",
+      "bytes": 10909,
+      "sha256": "6b3a172d0e3b127a27f3a045605a0bc636280fb69be7661caad0a34369250256"
+    },
+    {
+      "path": "GDINA-master/R/sim10GDINA.R",
+      "bytes": 652,
+      "sha256": "81b58b606d11defbc21f91d1d2cb0db116f6dc5397dbe1b4eafee2e6be66c6f4"
+    },
+    {
+      "path": "GDINA-master/R/sim10MCDINA.R",
+      "bytes": 556,
+      "sha256": "e221a15fb1e676cf28fe510b1c5bcf98f00b2cfc6bf8dae0b6b43cc97c439d9e"
+    },
+    {
+      "path": "GDINA-master/R/sim10MCDINA2.R",
+      "bytes": 557,
+      "sha256": "7f652c0240423c00df67cabb185110f25b9caaa3bc0610fc53626564f09cd84e"
+    },
+    {
+      "path": "GDINA-master/R/sim20seqGDINA.R",
+      "bytes": 702,
+      "sha256": "64a0720afb9eec2cd82ac113ac906f680c6ef3ca56168a2a2d196e62422c51ca"
+    },
+    {
+      "path": "GDINA-master/R/sim21seqDINA.R",
+      "bytes": 555,
+      "sha256": "011a0ace010a76f37a2a6d423465f39e4d250fcf88ff7ddc328a7112f360fd20"
+    },
+    {
+      "path": "GDINA-master/R/sim30DINA.R",
+      "bytes": 661,
+      "sha256": "d36b0c02ca89bd2259d87b8f9f013a9ea7d9c8dff017c45c74b60ef564141852"
+    },
+    {
+      "path": "GDINA-master/R/sim30GDINA.R",
+      "bytes": 677,
+      "sha256": "6b300d86440752d73d76363321437e2048ae6d19fb2bfbc039782b4998f7605f"
+    },
+    {
+      "path": "GDINA-master/R/sim30pGDINA.R",
+      "bytes": 434,
+      "sha256": "a3f566f6ab9821aa3fd16ee234ec9706f9f2c2309629882553b268fe7b3565ef"
+    },
+    {
+      "path": "GDINA-master/R/simGDINA.R",
+      "bytes": 39309,
+      "sha256": "d84feac4775a8fa98ce28e504e32e357ed371b2bd79e7c2d4946dcac4ba446b0"
+    },
+    {
+      "path": "GDINA-master/R/startGDINA.R",
+      "bytes": 1243,
+      "sha256": "4267205111f4e2d4bc11250189f9169ec3c5b928a9224b108862c52102c0e798"
+    },
+    {
+      "path": "GDINA-master/R/structuralparm.R",
+      "bytes": 4935,
+      "sha256": "bb811d4707ec4a4194226c0b664e7f9418124c73b98e149b2da276afc910646e"
+    },
+    {
+      "path": "GDINA-master/R/summary.GDINA.R",
+      "bytes": 5028,
+      "sha256": "bae8f080c27ccfad5c9d464e9d11ba129c41e54018906df1122984ede01b7a08"
+    },
+    {
+      "path": "GDINA-master/R/utils.R",
+      "bytes": 38977,
+      "sha256": "f8755c62fa44eb1ce8db95f1ddfd8320c186977bb1e48d3c5b41cdbb0f1e70ef"
+    },
+    {
+      "path": "GDINA-master/R/zzz.R",
+      "bytes": 453,
+      "sha256": "90bebe306f0078e56e8ab1bd338138c347adef52e80650ed981f09b3ada40e9d"
+    },
+    {
+      "path": "GDINA-master/README.Rmd",
+      "bytes": 4524,
+      "sha256": "600c3eda597ff57685b4314877de72b528153aad694accfd2530320fc1ca9527"
+    },
+    {
+      "path": "GDINA-master/README.md",
+      "bytes": 4317,
+      "sha256": "a15c465d12db86c3456d2cb55a55adab1f57f54dbbaa84f7ea2427a19b5d831a"
+    },
+    {
+      "path": "GDINA-master/_pkgdown.yml",
+      "bytes": 91,
+      "sha256": "fc49a6ad5ea87f79af346e34385aa36ef30b10e3a011d2f8356a872081a0993a"
+    },
+    {
+      "path": "GDINA-master/data/realdata_ECPE.rda",
+      "bytes": 11770,
+      "sha256": "3221574e8462df0be1be7dc3b75f3186372cf3f07f3a44a36920b1341560e82c"
+    },
+    {
+      "path": "GDINA-master/data/realdata_Tatsuoka1990.rda",
+      "bytes": 2059,
+      "sha256": "a0522463e752aaee57d39baca534282e1cd66ecf0710a70d99077c6a2969f4d0"
+    },
+    {
+      "path": "GDINA-master/data/sim10GDINA.rda",
+      "bytes": 2066,
+      "sha256": "815b2092f95e59a337d7320903fafc06c33866c1f5b91da7016ff539cf16c515"
+    },
+    {
+      "path": "GDINA-master/data/sim10MCDINA.rda",
+      "bytes": 8363,
+      "sha256": "d9127135616d24a5879dc5fe59c925709a1d4f4bf7491d4b027535d02daa3795"
+    },
+    {
+      "path": "GDINA-master/data/sim10MCDINA2.rda",
+      "bytes": 8315,
+      "sha256": "b10df63822a55773b8363d9defc2588688595604b4f48a4716beb1d4fdfc214b"
+    },
+    {
+      "path": "GDINA-master/data/sim20seqGDINA.rda",
+      "bytes": 9500,
+      "sha256": "1e8eacb16aa912b9039dee4138be1938ad680882f80b697c0393516049c3d56a"
+    },
+    {
+      "path": "GDINA-master/data/sim21seqDINA.rda",
+      "bytes": 9625,
+      "sha256": "69b1c4d87e20b2c18eb48c5eff9090d232338d9190737fdd860ab44717305d15"
+    },
+    {
+      "path": "GDINA-master/data/sim30DINA.rda",
+      "bytes": 4944,
+      "sha256": "5a80f88462765b91cf16d2d646d406f4dec4c63c0851d44552197d6df3f18d89"
+    },
+    {
+      "path": "GDINA-master/data/sim30GDINA.rda",
+      "bytes": 5313,
+      "sha256": "aaae1b12dc5f45a224c3af318fd26257cd007d21abb220f65e1fa97caa5197b5"
+    },
+    {
+      "path": "GDINA-master/data/sim30pGDINA.rda",
+      "bytes": 14565,
+      "sha256": "a3f482db9d725e05ad83880af2759f5c69f05ff5913409cc7837cef4b791bd13"
+    },
+    {
+      "path": "GDINA-master/docs/.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "GDINA-master/docs/404.html",
+      "bytes": 5260,
+      "sha256": "7322eeef5fb0f2ca0e62f3f7bdd74b6e5a8c8248c93aa78f0e97714e0ed57b6f"
+    },
+    {
+      "path": "GDINA-master/docs/404.md",
+      "bytes": 75,
+      "sha256": "b947d57d8110f94ceddaf24cc2c8d7736ddca2f81d5bfc9267c1c0dbb9637767"
+    },
+    {
+      "path": "GDINA-master/docs/articles/GDINA.html",
+      "bytes": 15158,
+      "sha256": "e33f98398bd20a05d780b5c227b99b540d6fd361713f54e6c5183a25c5680b19"
+    },
+    {
+      "path": "GDINA-master/docs/articles/GDINA.md",
+      "bytes": 3754,
+      "sha256": "7e1f583d7457e22d19bdc8815d46c3c4a7ccfd04852781bced802392f117ab06"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/CDMAnalysis_example.html",
+      "bytes": 36478,
+      "sha256": "5cdf271c7cb0c02c8ae60b1678442e97a9654cc12ab727d3b6bfb9b7b15b73e3"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/CDMAnalysis_example.md",
+      "bytes": 15116,
+      "sha256": "7492d5f189781e3e4ead35f01730e342b14c14b8fdbf46bb1b11c36bda156b54"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/CDMAnalysis_example_files/figure-html/unnamed-chunk-3-1.png",
+      "bytes": 35104,
+      "sha256": "8b35c29b344e56cda9b7dea25c4b0bb38f283fdca9fe30d83d8f3ad769d85c27"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/CDMAnalysis_example_files/figure-html/unnamed-chunk-3-2.png",
+      "bytes": 35245,
+      "sha256": "b26e9dbe15746184159aec1a7c8a6ebfa4a0c8f531c6001f371c40336037ffab"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/CDMAnalysis_example_files/figure-html/unnamed-chunk-7-1.png",
+      "bytes": 39916,
+      "sha256": "d6774008d8af6704799953530bbcde2be19102f023f2781edac07e973ff5f498"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/CDMAnalysis_example_files/figure-html/unnamed-chunk-7-2.png",
+      "bytes": 41326,
+      "sha256": "b3f022f191a1e4217f720dcaf6f560a4af4a1fb8e630aecab39a1ea6eae9d543"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/GDINA_example.html",
+      "bytes": 72906,
+      "sha256": "3fe9d8dd4aeb7bd75a0a79898090fb440155972c70b5a9368fed964653e9fc19"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/GDINA_example.md",
+      "bytes": 32083,
+      "sha256": "b8c48d3746460f60a40d9023ad50e77329df3a33b51b0cd67c8b0bf990c181b7"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/GDINA_example_files/figure-html/unnamed-chunk-22-1.png",
+      "bytes": 35816,
+      "sha256": "e645e69a4b301a26e6538cf350f7353257964373dc8315ccfd9403887b1a1880"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/GDINA_example_files/figure-html/unnamed-chunk-23-1.png",
+      "bytes": 35816,
+      "sha256": "e645e69a4b301a26e6538cf350f7353257964373dc8315ccfd9403887b1a1880"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/GDINA_example_files/figure-html/unnamed-chunk-24-1.png",
+      "bytes": 37599,
+      "sha256": "aa6f590bc11d35199e723f6d5b2f7db3d1f207c2d40d7973c788f53d5b810b4b"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/GDINA_example_files/figure-html/unnamed-chunk-25-1.png",
+      "bytes": 35488,
+      "sha256": "99369ebe357bb4f2f5658a02d0aa684d270105e8bfbf203648594ca7f4c50970"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/HOGDINA_example.html",
+      "bytes": 65010,
+      "sha256": "30c4815f06cdec9c8fe9e14f81e40feeb20d2ac3228815e6ca53bfd0f792cc4c"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/HOGDINA_example.md",
+      "bytes": 28958,
+      "sha256": "f52ba0f8ffa86d783223a5ba9e516d8f0cd98e9eecbb2dc8d336828b6c299464"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/HOGDINA_example_files/figure-html/unnamed-chunk-17-1.png",
+      "bytes": 35761,
+      "sha256": "4c8a41129f3eb99bff68ad12cd39192db721e92ca4a7e630412b58ea72d77c85"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/HOGDINA_example_files/figure-html/unnamed-chunk-18-1.png",
+      "bytes": 37544,
+      "sha256": "ae2a86d4790f083c2234b6f0c9f8c5fac60308cd9df6ebfcb33a6e8b6ac73a51"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/HOGDINA_example_files/figure-html/unnamed-chunk-19-1.png",
+      "bytes": 35464,
+      "sha256": "f89c0e37707c919e581df92d2e57fc798bb2d5d100489f430d4b0211ec04845e"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/LCDM_example.html",
+      "bytes": 58480,
+      "sha256": "3787989a65742eda328815d74615caeaabde1eaf9503e2cfc360df7cfad3a62c"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/LCDM_example.md",
+      "bytes": 25256,
+      "sha256": "da8fa4459ab9770e9da520cddcfe9bbd537505c938697cad99781ffa4db0fa60"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/LCDM_example_files/figure-html/unnamed-chunk-1-1.png",
+      "bytes": 35816,
+      "sha256": "e645e69a4b301a26e6538cf350f7353257964373dc8315ccfd9403887b1a1880"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/LCDM_example_files/figure-html/unnamed-chunk-1-2.png",
+      "bytes": 37615,
+      "sha256": "95f6b6bdf2acbd01a654b3d4fde0a51d08f3421be94ab338bcc74afec39d4c2e"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/LCDM_example_files/figure-html/unnamed-chunk-1-3.png",
+      "bytes": 35488,
+      "sha256": "99369ebe357bb4f2f5658a02d0aa684d270105e8bfbf203648594ca7f4c50970"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/modelfit.html",
+      "bytes": 43592,
+      "sha256": "5cdda4b6f321dd1a92f33bf39c4533f61bde7b4892fbd13571bd0cb995e5977a"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/modelfit.md",
+      "bytes": 27871,
+      "sha256": "ff147e6ac88a4842b5804e787c623bc9168b05bc2dd5e775321e52a34fc8b4c8"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/modelfit_files/figure-html/unnamed-chunk-4-1.png",
+      "bytes": 64897,
+      "sha256": "844aac90fd38aa1392ebb6e0c27232ddf8a43fc6e4b902a7ec1b6df57f003332"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/modelfit_files/figure-html/unnamed-chunk-4-2.png",
+      "bytes": 66454,
+      "sha256": "2c728fff7b6525e450b6c1dc9d43ebfb32e1f7b7e12600936fefa02d2282742e"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/sGDINA_analysis_example.html",
+      "bytes": 66091,
+      "sha256": "c06d714150f2728faa8b4607dcbe51aa26605b130c0773d231c2a34b0eb59a5f"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/sGDINA_analysis_example.md",
+      "bytes": 27918,
+      "sha256": "67051012ab38743417c15f58404436e323911b8b08bfbdb5243f2ba748d41244"
+    },
+    {
+      "path": "GDINA-master/docs/articles/OnlineExercises/sGDINA_analysis_example_files/figure-html/unnamed-chunk-4-1.png",
+      "bytes": 34596,
+      "sha256": "2e60e1eebc0fe8e70636008eb940464dff350e704b222618e8ac659dcd1c472d"
+    },
+    {
+      "path": "GDINA-master/docs/articles/index.html",
+      "bytes": 5288,
+      "sha256": "4a5fbfa2268717aac76aee1af4becae61911e82bac578217c96ca0b2911fa69b"
+    },
+    {
+      "path": "GDINA-master/docs/articles/index.md",
+      "bytes": 826,
+      "sha256": "b806f941974b2d604f44dfd0d1dc95225723d1b3fb37580f04136de6b8cfd33f"
+    },
+    {
+      "path": "GDINA-master/docs/authors.html",
+      "bytes": 6025,
+      "sha256": "29f94ea903188a40817df2fdf9d5e6ca78d412954d0a6ce95c08e617f8c3868b"
+    },
+    {
+      "path": "GDINA-master/docs/authors.md",
+      "bytes": 917,
+      "sha256": "e27f31c6bc4fe30692278c586523d5421bcd8ff4a4a502a40b2c974dd778f773"
+    },
+    {
+      "path": "GDINA-master/docs/bootstrap-toc.css",
+      "bytes": 1843,
+      "sha256": "5361de56c2d2171b60f7789ca00d7ad464332916707953c43a005b991bd9ab65"
+    },
+    {
+      "path": "GDINA-master/docs/bootstrap-toc.js",
+      "bytes": 4764,
+      "sha256": "f74f76927fe172f26d6be0eba938e1a9f3f01477ae6b6b310655577e72bc7478"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/bootstrap.bundle.min.js",
+      "bytes": 80496,
+      "sha256": "e4fd49181388c48ec5040bd3fe66f57c29c8e67fcd8502b3354b96ec7ab47cc7"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/bootstrap.bundle.min.js.map",
+      "bytes": 332111,
+      "sha256": "c61123e58cc0a4b65d737ba070c485911b3dbec6d7b802bdf6628395abd9c08b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/bootstrap.min.css",
+      "bytes": 290429,
+      "sha256": "e1de898c03279cab37c25af80ea836c2c62866bf29b7954d134f89aa93f0b6c7"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/font.css",
+      "bytes": 15864,
+      "sha256": "984e84874fdd0ea022dbf098e523cbfb047c3423aafb836ad38dfd93956b2c63"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/07d40e985ad7c747025dabb9f22142c4.woff2",
+      "bytes": 16388,
+      "sha256": "d3fe75d4c86f6df84f37c76ad44fa21c45778d7e14160b0294f92ec248fa144a"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/1Ptug8zYS_SKggPNyC0ITw.woff2",
+      "bytes": 48264,
+      "sha256": "b1bef1f03a77a36fc257c5525e32a1dd621bb6f935b743a419da7ed0b18dc8f5"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/1Ptug8zYS_SKggPNyCAIT5lu.woff2",
+      "bytes": 26988,
+      "sha256": "36920a27f3f245302f04e96a331d42b81dceda91b5229dfd757873bf12db4b05"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/1Ptug8zYS_SKggPNyCIIT5lu.woff2",
+      "bytes": 11384,
+      "sha256": "49d1df38711652b72cbb3ed91dfda0a981b88f75be4abb02eb6640f74f2a5bee"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/1Ptug8zYS_SKggPNyCMIT5lu.woff2",
+      "bytes": 31480,
+      "sha256": "2d603982caea60f15b741581c9e7bd88d1a7680fc52978137f9bc67c2dec61e0"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/1Ptug8zYS_SKggPNyCkIT5lu.woff2",
+      "bytes": 25864,
+      "sha256": "ac99ad1c437b60ef445a7c13c958d4d574ef98050de2ccf182ba6ccdb3bfbdfd"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/1f5e011d6aae0d98fc0518e1a303e99a.woff2",
+      "bytes": 10308,
+      "sha256": "05ad6c0ccbb6fc76af1914c0cc9572479659333cc00c236619df61222c48a886"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCs6KVjbNBYlgoKcQ72j00.woff2",
+      "bytes": 46980,
+      "sha256": "7db064fa5c5d305d684608744d621aa724ec4f1c6b00bb647697f4d8d3e78df1"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCs6KVjbNBYlgoKcg72j00.woff2",
+      "bytes": 24472,
+      "sha256": "a9d09ab6d1c4b1b02e06a5449c7ff2632d52c87215df9727648a3201efd5951b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCs6KVjbNBYlgoKcw72j00.woff2",
+      "bytes": 14664,
+      "sha256": "3141288b0697416cbd4a3198f70f41483efde6d3f033aba96bd47c369649bad8"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCs6KVjbNBYlgoKew72j00.woff2",
+      "bytes": 20852,
+      "sha256": "c86112704544f597d4814625795347beffe516e15c679d52b14302ec5e149ba7"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCs6KVjbNBYlgoKfA72j00.woff2",
+      "bytes": 15068,
+      "sha256": "57e110b6d4ff875cf8f9aedc7b818bee5143433b4c9032e0e373e40c9604a460"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCs6KVjbNBYlgoKfw72.woff2",
+      "bytes": 34924,
+      "sha256": "dabae363ac0ae6c3b2a137a32f7132b42520a8af252f87aa6c2198f2a79cf91c"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCv6KVjbNBYlgoCxCvjs2yNL4U.woff2",
+      "bytes": 13156,
+      "sha256": "083fb2d0137ac54e05c22d540864c7e0c396609d2d5372bb867d7ba5301c114f"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCv6KVjbNBYlgoCxCvjsGyN.woff2",
+      "bytes": 29844,
+      "sha256": "3658a0717e347c1db8d80dd565584b9dc56769fbf87909c50a4a7740206ec5f7"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCv6KVjbNBYlgoCxCvjtGyNL4U.woff2",
+      "bytes": 18108,
+      "sha256": "0cb2c5c2d5750826f2ec6c675d772f8014b7bb708c28128a76beba154b43ae49"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCv6KVjbNBYlgoCxCvjvGyNL4U.woff2",
+      "bytes": 13204,
+      "sha256": "b3d8897e85a2b2c70cdea0c70f28e3c29a75714c7745054fa62743831c37d616"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCv6KVjbNBYlgoCxCvjvWyNL4U.woff2",
+      "bytes": 20960,
+      "sha256": "f6be9c6684826134102a1f20ac9c05c72185a0b50b75d40f88e10e4de32b68c5"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/4iCv6KVjbNBYlgoCxCvjvmyNL4U.woff2",
+      "bytes": 38020,
+      "sha256": "30073583012b73a5c05c290e601325850ddbc7c7a1241561ec9264b8744c2a86"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/626330658504e338ee86aec8e957426b.woff2",
+      "bytes": 21752,
+      "sha256": "8a8e11bad67c3ae75ba03c969fbe5742b8bf088f1b2ca2dd04610a352475ee37"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7jsDJT9g.woff2",
+      "bytes": 1068,
+      "sha256": "a19994c6aeb8cc10a2b4644ea2e240d9016c4629f5913915a5b8e9c44da80797"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7ksDJT9g.woff2",
+      "bytes": 1236,
+      "sha256": "2e15c09f5c3dcb4369ecc01018c93749ee745aed4cd51f8b783b1ade647a3b6f"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDI.woff2",
+      "bytes": 14180,
+      "sha256": "b514997508ffc723a0087d6d85c7972bd0f180cd4b190325be978cb87025df36"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7osDJT9g.woff2",
+      "bytes": 5836,
+      "sha256": "ade2729b6018a3e3e985242296b383500719dd28d16c449a2a666c3a949f3710"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDJT9g.woff2",
+      "bytes": 21796,
+      "sha256": "f561bebbed9f173d0a727805149a121f261722d42259ce941ebf68bb29f3d4ec"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7qsDJT9g.woff2",
+      "bytes": 1068,
+      "sha256": "6013955835031206b252e66daac0922ac8d0cc5843157af6d39cbbefc4883a93"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7rsDJT9g.woff2",
+      "bytes": 928,
+      "sha256": "272605731cbf197b889b24a37971952228290435b8eded922c94ba64955dbd5d"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lqDY.woff2",
+      "bytes": 5840,
+      "sha256": "26d1dbd047f3e3167a47a32d90011e68c0491450482b74c575b6b21075ab57c1"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lqDY.woff2",
+      "bytes": 6032,
+      "sha256": "300aa5a91d8d582a14e0c6ece4293bc35f132e3a3a649e5fdf8f8dded715777a"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lqDY.woff2",
+      "bytes": 5036,
+      "sha256": "d58dafd8f0b43c7bbffc003540514a742bf988ec213f96645dcf112938e4164e"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2",
+      "bytes": 23124,
+      "sha256": "f61f863b7dcf4f836954b8a11abc2b2284fb089d669c2cde701b198f9137fbcb"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lqDY.woff2",
+      "bytes": 7048,
+      "sha256": "fa58f80d5251de704511935874593441df23bbd968ddd0ba288295c19708195c"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2",
+      "bytes": 14868,
+      "sha256": "691491f1fc8badab623e1be56f92cc2d98c462b16617c67e1e288d6b061444bc"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lqDY.woff2",
+      "bytes": 8044,
+      "sha256": "a5984c2e2d01b200cc490bc23a4d437a3242c8c1c3d244a89eb7a6f5b11cd160"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwkxduz8A.woff2",
+      "bytes": 8024,
+      "sha256": "ded3f805bc7e6647a673445d3d245223e5048f2bb03dd3d25c0d63db59ed29e4"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlBduz8A.woff2",
+      "bytes": 7068,
+      "sha256": "59ef09633ae72774978e64bba41dc2bce30b53da234c8020b24a9350dfc0fee3"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2",
+      "bytes": 14876,
+      "sha256": "156650610835fe32914722ecfc8dab0ebbb84795e201b842158afa0ea873cfa4"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmBduz8A.woff2",
+      "bytes": 5852,
+      "sha256": "615c0d875de2ec25e22bba41b5cd0e1184517a90916cfac8a4be8467539a5c8f"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmRduz8A.woff2",
+      "bytes": 23112,
+      "sha256": "9d8b9b83f39fe3768c876486e92bb995c1a92c9e85b69481da84e5444ecc980f"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmhduz8A.woff2",
+      "bytes": 5044,
+      "sha256": "f294b104a531823ee717881667ff33659a608feaed803c512d596e11c0028632"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmxduz8A.woff2",
+      "bytes": 5992,
+      "sha256": "8dc088cf6d206732af59c4711ffcdac3e348e8e0db3d8d02511a78addf1fb799"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxduz8A.woff2",
+      "bytes": 7948,
+      "sha256": "3380ca07336aca88710606a065871d156cd513642e4dd3847ae9c0aadbf7154c"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBduz8A.woff2",
+      "bytes": 6944,
+      "sha256": "04d65f6a36dfdc86cd8985b5a76477459e8cd2dcdb8aa7a6c04166eba6cfc4d0"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu.woff2",
+      "bytes": 14724,
+      "sha256": "06b675a649489d21b7fd33f19b1c6d37e8bd778ded07ecfec26bbc8f11e694f4"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBduz8A.woff2",
+      "bytes": 5824,
+      "sha256": "a33512ad87ab43143f32bb72a12f632c548492d0c9812639e2d96f6c5ec165b3"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRduz8A.woff2",
+      "bytes": 22928,
+      "sha256": "bdfe6be41d09ed9bb7084c79c799baf380b43fd81474ab57f1099d177ddd476d"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhduz8A.woff2",
+      "bytes": 5008,
+      "sha256": "eac614c07305eb019a65be8876f3f563462626f70ae1845e14a5027361d77fa1"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxduz8A.woff2",
+      "bytes": 5996,
+      "sha256": "c727042ba9c59613d37cc97a464f5492c891cf2c0251a36d76ae09c4a6b59fcd"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxduz8A.woff2",
+      "bytes": 7876,
+      "sha256": "c7c0156d5a425af173817ffd3be8d652d0d622a71e0cd17c994e56a0de855a0b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBduz8A.woff2",
+      "bytes": 7020,
+      "sha256": "94acd95f390b7680002714015514ab34801a655bf2054ecddc648ee7ec602403"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2",
+      "bytes": 14792,
+      "sha256": "46d6a0984aa795b764141232671160e61bdcc49e900de67ca6b35bae25b1ebdd"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2",
+      "bytes": 5868,
+      "sha256": "6ab385de21cc93f42baaf191a3d9e8cc8eb15ea65f4f236e64fe88e0e6f11fb0"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2",
+      "bytes": 22984,
+      "sha256": "88d8bae8b5e26ef17eef2ca0bde8308a1085ff97e551cbb45c0d40640edbb58a"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2",
+      "bytes": 5036,
+      "sha256": "8fb135ae6531366eba7aceb462bdb224f0ea1ebb267dc4b184bc513ea924cd01"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2",
+      "bytes": 6036,
+      "sha256": "34c81a0149e549e7dfeea21177e07e44d429d1632477cc0169fa4cb79d36f43e"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR54z1Qlv-GDxkbKVQ_dFsvWNBeudwk.woff2",
+      "bytes": 700,
+      "sha256": "128ff5a4b55e96867d1fa209fe7af29d71c240b00d4856731d1ae0f84cffc081"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR54z1Qlv-GDxkbKVQ_dFsvWNReuQ.woff2",
+      "bytes": 13436,
+      "sha256": "b519c652777c636add992fcfc14ff1360572af19ba11151ea78c17d3c44d153b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR54z1Qlv-GDxkbKVQ_dFsvWNdeudwk.woff2",
+      "bytes": 628,
+      "sha256": "d124c2df0365287e69fe9c6a6529bcec4ab8e7b6293816d31a9bbe046fb2dea9"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR54z1Qlv-GDxkbKVQ_dFsvWNheudwk.woff2",
+      "bytes": 628,
+      "sha256": "d124c2df0365287e69fe9c6a6529bcec4ab8e7b6293816d31a9bbe046fb2dea9"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR54z1Qlv-GDxkbKVQ_dFsvWNleudwk.woff2",
+      "bytes": 628,
+      "sha256": "d124c2df0365287e69fe9c6a6529bcec4ab8e7b6293816d31a9bbe046fb2dea9"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR54z1Qlv-GDxkbKVQ_dFsvWNpeudwk.woff2",
+      "bytes": 12340,
+      "sha256": "2381f871665f900ab36b625334d35dd5c75df823542687d2c4870eef056a2df4"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR54z1Qlv-GDxkbKVQ_dFsvWNteudwk.woff2",
+      "bytes": 3112,
+      "sha256": "802e928ebbf97ebac232859cabc67353ad99ffa5c775284287fb8ee5d0095138"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR64z1Qlv-GDxkbKVQ_fO0KTet_.woff2",
+      "bytes": 10972,
+      "sha256": "852d6f4d44d7823c3714513b873360e863f2d3b9a3feff179db85295922dcfc5"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR64z1Qlv-GDxkbKVQ_fO4KTet_.woff2",
+      "bytes": 20772,
+      "sha256": "7826aebe306fafd53683574b225e42ee7cceb68de93e87be78bf16abe6b26a68"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR64z1Qlv-GDxkbKVQ_fO8KTet_.woff2",
+      "bytes": 4188,
+      "sha256": "63d01b2cb200dfcac4cb0571118dc5217e3ff9388ee8b7209cc27a6da7d01541"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR64z1Qlv-GDxkbKVQ_fOAKTQ.woff2",
+      "bytes": 13268,
+      "sha256": "f43e9f792d1275d0676c3947c69130f3719deb546e9af5fcdd66b46b1077fda3"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR64z1Qlv-GDxkbKVQ_fOMKTet_.woff2",
+      "bytes": 10020,
+      "sha256": "0a7511f5dca18dfef959ebfc81d56e8034a70589def3c55d8609ec6d9a571242"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR64z1Qlv-GDxkbKVQ_fOQKTet_.woff2",
+      "bytes": 8032,
+      "sha256": "372536b96c564f6d09e6d07410962ea20b3f5efa17b1bdc25dbb2dfb35068d5b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/CSR64z1Qlv-GDxkbKVQ_fOwKTet_.woff2",
+      "bytes": 6292,
+      "sha256": "28037f34654cd8cd09caf32e64208c98605852104dac4c71009054ed3710e2ee"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvQlMIXxw.woff2",
+      "bytes": 2384,
+      "sha256": "9d5a510257df6c4b14f63b979c89af8be75c828edf1311a69eb945c63f986344"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvUlMI.woff2",
+      "bytes": 22448,
+      "sha256": "97f01332aeda642a2f298030203dd4dd72802c0288ab2705d33daf691278e563"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvXlMIXxw.woff2",
+      "bytes": 1876,
+      "sha256": "d22932aa74134dc72f0d6eed0f8675f6fb84bb8a6ad0c44f9552e48683a3cd10"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvYlMIXxw.woff2",
+      "bytes": 1696,
+      "sha256": "dee4824554612b490fca8d1dba3bb11648f2a6135e45ce4688efd5c1ec5e583b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvZlMIXxw.woff2",
+      "bytes": 1956,
+      "sha256": "edd287485fa5d3135894f2d7d7e9613d355983c4eebafb79ccaf2dc43dbef006"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvalMIXxw.woff2",
+      "bytes": 34012,
+      "sha256": "da6214a7b9f9eca88a7ae3b7b6fec00db41741774d8a38e6a899bd8e85968411"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_QiYsKILxRpg3hIP6sJ7fM7PqlONvblMIXxw.woff2",
+      "bytes": 8216,
+      "sha256": "4e4e882b60858b8fa861d2458c41b98e92efac271951d8ba28ba58e7d9bbb1da"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_SiYsKILxRpg3hIP6sJ7fM7PqlM-vWjMY.woff2",
+      "bytes": 33568,
+      "sha256": "ab316ee7e4a28a149fe9f74a3e9173c3d14a11bb7d4df898dd2fe10da7b7fe24"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_SiYsKILxRpg3hIP6sJ7fM7PqlMOvWjMY.woff2",
+      "bytes": 8808,
+      "sha256": "dd503d60c322511f5618af7d1dc4f2d7002a58f665b515c7d62ea6f5535ac669"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_SiYsKILxRpg3hIP6sJ7fM7PqlMevWjMY.woff2",
+      "bytes": 3096,
+      "sha256": "01e467c83c24a9b8e2a866e9fe443d6d50d9db9403bf7b710bd10b37ae8c208d"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_SiYsKILxRpg3hIP6sJ7fM7PqlMuvWjMY.woff2",
+      "bytes": 8176,
+      "sha256": "d8a28d78c1c6de660e1be91fdadc9b01268415407922ed3cf64909a0b02a6356"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_SiYsKILxRpg3hIP6sJ7fM7PqlOevWjMY.woff2",
+      "bytes": 14180,
+      "sha256": "fd7699ecbd3ce9ae5db900abc491150d176e8b1530aee9a9268cb3023658a5b3"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevW.woff2",
+      "bytes": 22044,
+      "sha256": "8b774aaa5137a38ef40f4ac9d36db9a5eee152b2f66589dfdc82ff007fc87135"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPuvWjMY.woff2",
+      "bytes": 10696,
+      "sha256": "34dfcd3f61fc26a6ba2a7ee30eab6bc4bdc5d4872a8b49a90a17f1bf9e70553b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2",
+      "bytes": 23828,
+      "sha256": "a187b077090fe8ae3fd2d7496aabbeae604819c718a282e0afc92df72b450766"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2",
+      "bytes": 26368,
+      "sha256": "0f7f5f2fbb4eae126790fe6f01659ab3ee0806e8038a941908e893020569f51a"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2",
+      "bytes": 12928,
+      "sha256": "26b2403f995ed65fb49037a6498c074d3ec3c36031a69fc368c4c2180e2c01fa"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2",
+      "bytes": 70688,
+      "sha256": "54d9a78b7ff60b689ad9f3017ffac8547b5d871afec733f6c1c3ae36577ee504"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2",
+      "bytes": 37956,
+      "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3-UBGEe.woff2",
+      "bytes": 17624,
+      "sha256": "97fbf7bd0b4579e632392a4f483acdae73cbf59ad90c1e5d2c5ec4044c377fce"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3CUBGEe.woff2",
+      "bytes": 4348,
+      "sha256": "ec7769b089813996276482bbe7017adfffdd6c7543fd1f76244e2ffc1138ed86"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3GUBGEe.woff2",
+      "bytes": 36652,
+      "sha256": "01f94d674db55952c35898fa4da22c3e7065c3cc4dbbcc9cb7beb8b6b017fbc9"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3KUBGEe.woff2",
+      "bytes": 29392,
+      "sha256": "cedb374b05a35034cf96db185db4eeb8f8ce49e1a56197673702ff11b5533d6e"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3OUBGEe.woff2",
+      "bytes": 14340,
+      "sha256": "0b60bbe04e9c479444b31270a72179f53e400beee57b7dd176c08e5e2e716831"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3iUBGEe.woff2",
+      "bytes": 23664,
+      "sha256": "481dd0c01e6bbb129fd147eb5d8571016193cba141c4627ca60ceabdb5a46ea8"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "bytes": 43136,
+      "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMawCUBGEe.woff2",
+      "bytes": 41348,
+      "sha256": "7cb4281a0ccc84cc18617842c639fc66541cbef94a9dd245c754700210b4fcec"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2",
+      "bytes": 20556,
+      "sha256": "2addf2d86d7a5778653b36d551e97a39da52855f82fac7461cfc1bd86d460aed"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/QGYpz_kZZAGCONcK2A4bGOj8mNhN.woff2",
+      "bytes": 78908,
+      "sha256": "2567d1d7790f635a8e4a705500bbf702f1220f5a14252a94e8bf2350fcc1ab2d"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/S6u8w4BMUTPHjxsAUi-qJCY.woff2",
+      "bytes": 5776,
+      "sha256": "077a69d5b698467f49de34980815c848fecb40e35f4b3969b42a703b8b916953"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/S6u8w4BMUTPHjxsAXC-q.woff2",
+      "bytes": 24408,
+      "sha256": "bca1d88ada544d9c80872d4da27133fab6d347361fa26e932b47ec9559088fd0"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/S6u9w4BMUTPHh6UVSwaPGR_p.woff2",
+      "bytes": 5552,
+      "sha256": "3a5797f440bc67b59830cad81e59a71011e35cb45ed7f747b61a69b0a9b0d6ae"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/S6u9w4BMUTPHh6UVSwiPGQ.woff2",
+      "bytes": 23040,
+      "sha256": "c447dd7677b419db7b21dbdfc6277c7816a913ffda76fd2e52702df538de0e49"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/S6u9w4BMUTPHh7USSwaPGR_p.woff2",
+      "bytes": 5820,
+      "sha256": "5627143aaeb49ba46b4614d4fefb967ad8d163fb0743a2fa9c7e53930e559062"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/S6u9w4BMUTPHh7USSwiPGQ.woff2",
+      "bytes": 23236,
+      "sha256": "115f6a626ca115d4ad5581b59275327e0e860b30330a52b0f785561332dd2429"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/S6uyw4BMUTPHjx4wXg.woff2",
+      "bytes": 23580,
+      "sha256": "918b7dc3e2e2d015c16ce08b57bcb64d2253bafc1707658f361e72865498e537"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/S6uyw4BMUTPHjxAwXjeu.woff2",
+      "bytes": 5612,
+      "sha256": "8b9fc9737043f88c1a9a7195c27a239bd329cc33d928ffb67736c61ae7a1dbbd"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2",
+      "bytes": 18748,
+      "sha256": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "bytes": 48256,
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2",
+      "bytes": 18996,
+      "sha256": "1be3448e292fbf05ffe176fe1e43f135013d50b1e7d324ad1a558f623d3bb6f6"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2",
+      "bytes": 85068,
+      "sha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2",
+      "bytes": 25960,
+      "sha256": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2",
+      "bytes": 11232,
+      "sha256": "6e9e020a25f9b56d418f2c085b1d3c09725a4da23fe693a5b463064606732190"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2",
+      "bytes": 10252,
+      "sha256": "5c66f9e07e90c6d4ac4922cc68d60de26c17b1858e677fb5e603fce3952b3ff2"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/XRXV3I6Li01BKofIMeaBXso.woff2",
+      "bytes": 20776,
+      "sha256": "63b14e3ef0966785438b8947380dfbcad178cbd3c6a5ed2172672ca0d8b839ac"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/XRXV3I6Li01BKofINeaB.woff2",
+      "bytes": 39128,
+      "sha256": "ba344451eab25b217a165363b1982048a5e5830a0daf36577973955a04cac793"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/XRXV3I6Li01BKofIO-aBXso.woff2",
+      "bytes": 35588,
+      "sha256": "2c8d792869818ecb253a46bc3c63c7013df7aac2f69291c3c85e5cdc94160960"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/XRXV3I6Li01BKofIOOaBXso.woff2",
+      "bytes": 28928,
+      "sha256": "88985ca614d50fbe06bf527b0d67703d01cab729d744e41c1b5b6bf67c3a08e5"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/XRXV3I6Li01BKofIOuaBXso.woff2",
+      "bytes": 13096,
+      "sha256": "61e5958cf3c731423456b31739aa454317ea3bdcb205dd87090e94f632c3642b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/c2f002b3a87d3f9bfeebb23d32cfd9f8.woff2",
+      "bytes": 27908,
+      "sha256": "c648ee5bfda70d44b9fb628f4114d1cc4f984d050cbb4881052237ede3638a2e"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/ee91700cdbf7ce16c054c2bb8946c736.woff2",
+      "bytes": 31076,
+      "sha256": "29e3890496844a9ea81975c52771c587c872b4eb317026422d1995b88d21b57d"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqW106F15M.woff2",
+      "bytes": 26368,
+      "sha256": "be7296389be234abc22997275b6b7d056a0e6ff9d6e7dd63cfe7d3232aac9dac"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06F15M.woff2",
+      "bytes": 37752,
+      "sha256": "a6fa0e8ac2a665c121a19c2e2434fb286e3afdef7b9288739a73c7cb6849108c"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2",
+      "bytes": 54944,
+      "sha256": "f2d92a95ae369af994faeba39e2f987974e7cb1f3f3a984e6538d535f1ff9e9b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6F15M.woff2",
+      "bytes": 4844,
+      "sha256": "23db8c30fcaf25e39a14a799e776804c7fd541ff0663189db7bb652d15129a73"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6F15M.woff2",
+      "bytes": 17212,
+      "sha256": "7a79d808ca680f3d672a68aa28098ad9ca9d4a93ae24a04b4b00c07f4ab67d40"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06F15M.woff2",
+      "bytes": 17880,
+      "sha256": "0d3c34da39df0aa6b82347b45364e9e95fcece8029b5d9e7325bcef4e56234f1"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6F.woff2",
+      "bytes": 50216,
+      "sha256": "186836b74ceac07b2764c07c0379420e3014efb30fe918461c235e0ef6cbc4a2"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6F15M.woff2",
+      "bytes": 22920,
+      "sha256": "90e5211e2fa04327726f93c19dc01dffebc18d8def23931848be1213dc826ac3"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6F15M.woff2",
+      "bytes": 32016,
+      "sha256": "9dbf8ed5c11ef7e7e80a08cb18d7f7e0e93eea2f77345ee8a73d6e08e122c36e"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWxU6F15M.woff2",
+      "bytes": 56528,
+      "sha256": "b011091d0c5f7c3c5139a40f3120b157f6c4b587164ff66e66a2bccd58a5a91f"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2",
+      "bytes": 48320,
+      "sha256": "d8e4fe0452aa2076429a9bb5d8757d00a994dd95986cf950e9a1a371b9a072a0"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2",
+      "bytes": 16920,
+      "sha256": "7abb700b280437b795e68b3a85a1dcbfdf04bb815555762033ade4f7894f2554"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2",
+      "bytes": 16496,
+      "sha256": "cc762462ea67b7815649ea3cc005699e3b95b3244b59eb2ce2d22e3ad33497c2"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2",
+      "bytes": 35156,
+      "sha256": "d5bab8e28732fe3d10dcef4f77b9c248605bbb2a87d289a2539251ceafab536a"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2",
+      "bytes": 49268,
+      "sha256": "95dd03b930aca04ab393f625101f7367e3abc83b3b09e6074de1fc081ba6fd1c"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2",
+      "bytes": 4504,
+      "sha256": "197ef1e4874d6f8f59bcb8f303029b7fd40aebd7a23aa96c1b649b3faea5d57c"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2",
+      "bytes": 26588,
+      "sha256": "2809606237a64bd9c1461e727f369ddfd77a350e4900fffe64e8bfe16a2b3454"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2",
+      "bytes": 21332,
+      "sha256": "08ea4cf0a7c61077656395aa7dc728a6d184ee4bdae03a1bc34c17ee97e8f31c"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2",
+      "bytes": 26596,
+      "sha256": "8f80f993e523f2e6c2d097552740fd26331658da23ffad31d26edcdd3aeec370"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2",
+      "bytes": 51912,
+      "sha256": "a093b888254afd7deb8e37cccfd434e7d06ed47d22cfed9621631d80e1e81554"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/q5uGsou0JOdh94bfuQltOxU.woff2",
+      "bytes": 19308,
+      "sha256": "f410a35ffd32619dc7d3158c00492f635921cfafa4337d46fa592fa381f0191c"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-5.3.8/fonts/q5uGsou0JOdh94bfvQlt.woff2",
+      "bytes": 25376,
+      "sha256": "5e0c6ca42b9531a42a7994e3ed907ea9e3a360dcaa6f77847ef587340d21d6ac"
+    },
+    {
+      "path": "GDINA-master/docs/deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js",
+      "bytes": 2107,
+      "sha256": "e2f79541bbbbfff2e4e534a673b615e3c331b4ccbdf1edba71fe4cae06589f0a"
+    },
+    {
+      "path": "GDINA-master/docs/deps/clipboard.js-2.0.11/clipboard.min.js",
+      "bytes": 9160,
+      "sha256": "e17a1d816e13c0826e0ed7febfabc3277f45571234bde0bf9120829a7169edc9"
+    },
+    {
+      "path": "GDINA-master/docs/deps/data-deps.txt",
+      "bytes": 885,
+      "sha256": "32362fcf57a91214a314198da22298515adb95fe55d565b9b6e429c2e5fe4c07"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/css/all.css",
+      "bytes": 140418,
+      "sha256": "f6213f7f69b2f7627cba1819c639a5506c537bea2c964bdc129295a5361e21af"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/css/all.min.css",
+      "bytes": 102250,
+      "sha256": "a32c3206a3f0ece3b6e07f6eba486b47d5af081295e4da9c2a5a394b62feea68"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/css/v4-shims.css",
+      "bytes": 41574,
+      "sha256": "76f8d179b80cf507bd955eab362ab64f72c293b28b8d82ade0c59ecaa3f1e91f"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/css/v4-shims.min.css",
+      "bytes": 27593,
+      "sha256": "59da2eae4a505bc96abd025f48d2f8e2a985537424820c7908ac7eff22be1fe1"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/webfonts/fa-brands-400.ttf",
+      "bytes": 209128,
+      "sha256": "e28096fa75a96ac77020155ea3a6dd7312983e84115366d4cf49a0c312ec6d51"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/webfonts/fa-brands-400.woff2",
+      "bytes": 117852,
+      "sha256": "232c6f6a7678304f9efaa26f30b1610debc2ba9f4cd636b5e6751c8d73761b92"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/webfonts/fa-regular-400.ttf",
+      "bytes": 67860,
+      "sha256": "9174757efc83e072436e873c22be1663d3c103b0a16d7fb73569af4918d4d351"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/webfonts/fa-regular-400.woff2",
+      "bytes": 25392,
+      "sha256": "c27da6f833431da5aa295c44540bfac0fd8270ba6a3c4346427006d8a7b34b76"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/webfonts/fa-solid-900.ttf",
+      "bytes": 420332,
+      "sha256": "b4990d0d0c5f5d38d62e936eea120674e584c7eea8dcee38a975c0cf9a37539b"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/webfonts/fa-solid-900.woff2",
+      "bytes": 156400,
+      "sha256": "ae17c16afbea216707b2203ea1cf9bdb45b9bfe47d0f4ae3258ddbc6294dd02f"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/webfonts/fa-v4compatibility.ttf",
+      "bytes": 10832,
+      "sha256": "ff8f525fb050c5d24519ccc8f5723d85b2e51edd3f9bc6548af55aebadd4f269"
+    },
+    {
+      "path": "GDINA-master/docs/deps/font-awesome-6.5.2/webfonts/fa-v4compatibility.woff2",
+      "bytes": 4792,
+      "sha256": "c7a869faca299d15be10a01f19d0765a7c4d46d8922d9b9317235c1e4a6f0982"
+    },
+    {
+      "path": "GDINA-master/docs/deps/headroom-0.11.0/headroom.min.js",
+      "bytes": 4526,
+      "sha256": "02c517e12244d7ecae0eee7e98057325bb9834f1e3fd6ae81ee67c22bfc2904d"
+    },
+    {
+      "path": "GDINA-master/docs/deps/headroom-0.11.0/jQuery.headroom.min.js",
+      "bytes": 589,
+      "sha256": "657ff235285b8eab28847d64f79962a98f4677cb8e884d52e2f65cfbd290d4ae"
+    },
+    {
+      "path": "GDINA-master/docs/deps/jquery-3.6.0/jquery-3.6.0.js",
+      "bytes": 288580,
+      "sha256": "1fe2bb5390a75e5d61e72c107cab528fc3c29a837d69aab7d200e1dbb5dcd239"
+    },
+    {
+      "path": "GDINA-master/docs/deps/jquery-3.6.0/jquery-3.6.0.min.js",
+      "bytes": 89501,
+      "sha256": "ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e"
+    },
+    {
+      "path": "GDINA-master/docs/deps/jquery-3.6.0/jquery-3.6.0.min.map",
+      "bytes": 137972,
+      "sha256": "399548fb0e7b146c12f5ba18099a47d594a970fee96212eee0ab4852f3e56782"
+    },
+    {
+      "path": "GDINA-master/docs/deps/search-1.0.0/autocomplete.jquery.min.js",
+      "bytes": 36562,
+      "sha256": "41cd989c022ac2ad142cab1b4e3d03e0dc47d3d80b616bb2092709f5d86be4f5"
+    },
+    {
+      "path": "GDINA-master/docs/deps/search-1.0.0/fuse.min.js",
+      "bytes": 23035,
+      "sha256": "227dc237b65445027834bc62afbd220f4bdf89bc50cc452f2bf539114167854f"
+    },
+    {
+      "path": "GDINA-master/docs/deps/search-1.0.0/mark.min.js",
+      "bytes": 16917,
+      "sha256": "21d62e1053f7589fe6365cccd7c636d1781abf7879a605d8ce5f1f5b81a7b8fa"
+    },
+    {
+      "path": "GDINA-master/docs/docsearch.css",
+      "bytes": 11758,
+      "sha256": "52df098c2f2582680168d9dd52441415c7df20a90b20e3e3220768975f33c127"
+    },
+    {
+      "path": "GDINA-master/docs/docsearch.js",
+      "bytes": 2018,
+      "sha256": "7d6964deb026efa1c15de6eec625a65b2a0a2e93cc389d9fe7fde6b3699e6cc7"
+    },
+    {
+      "path": "GDINA-master/docs/index.html",
+      "bytes": 13746,
+      "sha256": "46afd997a16db2975d246c044002a8b2b2a843b83ebda87df6ff76e50efd45e8"
+    },
+    {
+      "path": "GDINA-master/docs/index.md",
+      "bytes": 4244,
+      "sha256": "36d8ca3be5815698b0793e5fce3fc19b6b6685b7165bace24eb179f1bfad6fc6"
+    },
+    {
+      "path": "GDINA-master/docs/katex-auto.js",
+      "bytes": 621,
+      "sha256": "fde092686bd7c6c1970134759a79e67af4dc87b0d8f1ebfeb3eaafb092ac85d8"
+    },
+    {
+      "path": "GDINA-master/docs/lightswitch.js",
+      "bytes": 2498,
+      "sha256": "1cf57a8900aec43103b679d45c472a276f125883645b1f3368eefabe03a78afa"
+    },
+    {
+      "path": "GDINA-master/docs/link.svg",
+      "bytes": 810,
+      "sha256": "f1403d3dc6051421df5b25acff90c21eb99041849957afd9e2908f66f34d1ee6"
+    },
+    {
+      "path": "GDINA-master/docs/llms.txt",
+      "bytes": 13243,
+      "sha256": "f7c874b12259dbfce4c00236510343d6904a88a20066776833b52533568a37c7"
+    },
+    {
+      "path": "GDINA-master/docs/news/index.html",
+      "bytes": 21060,
+      "sha256": "f15b3bdb8c456b9657f1314094b609a08cc90aed55d33d53639a8746ad4348f7"
+    },
+    {
+      "path": "GDINA-master/docs/news/index.md",
+      "bytes": 9751,
+      "sha256": "1371fd4d3ffc314ade58ebb4de726d8e78d59681feb96f60d9481fab57c0334e"
+    },
+    {
+      "path": "GDINA-master/docs/pkgdown.css",
+      "bytes": 7308,
+      "sha256": "5adfe331db92a9ac53058e7ba21dcaed1716a9b577226fda26d8c6dc1702aae0"
+    },
+    {
+      "path": "GDINA-master/docs/pkgdown.js",
+      "bytes": 4964,
+      "sha256": "9eda309b80ba202b4fdf74c96e0d3db473e0e1377536a5948d8698d53c598a88"
+    },
+    {
+      "path": "GDINA-master/docs/pkgdown.yml",
+      "bytes": 655,
+      "sha256": "4bbf119a0068e3c8257cc608968a0cce8e6c30c1f259713691de02296db80c4e"
+    },
+    {
+      "path": "GDINA-master/docs/reference/CA.html",
+      "bytes": 10108,
+      "sha256": "a979b72c012ce15095051a84c3ab91047a63713931ae7debcdb3ce62d12c5f6c"
+    },
+    {
+      "path": "GDINA-master/docs/reference/CA.md",
+      "bytes": 1928,
+      "sha256": "a1461cf6b195061e81de567fc242500cda3ef4219e4a4eddbbf6bd513a4565c3"
+    },
+    {
+      "path": "GDINA-master/docs/reference/CM.html",
+      "bytes": 10066,
+      "sha256": "2ae7f554a17589b39d60430ed24d1500ca3b050f29c72b8185f7b2d89c3bfabc"
+    },
+    {
+      "path": "GDINA-master/docs/reference/CM.md",
+      "bytes": 1910,
+      "sha256": "ada3becf7bf895ba410c798acb65050e8edeed3099ba440e21ad615cda35d23b"
+    },
+    {
+      "path": "GDINA-master/docs/reference/ClassRate.html",
+      "bytes": 10366,
+      "sha256": "05e19ab12904912a3add6f173e888e5c4ae2c5110144493280b469c9312e6309"
+    },
+    {
+      "path": "GDINA-master/docs/reference/ClassRate.md",
+      "bytes": 1441,
+      "sha256": "6f93a8af273962aa0dc035ac539b86a78f1ba9a3914a2d1ad12a9e8195e6ed21"
+    },
+    {
+      "path": "GDINA-master/docs/reference/DTM.html",
+      "bytes": 22242,
+      "sha256": "187ae5a14c437b6966f68603a76ed69e1dd611d4c53f0674ed14f49545351383"
+    },
+    {
+      "path": "GDINA-master/docs/reference/DTM.md",
+      "bytes": 3635,
+      "sha256": "227eef60fb600e5800a92f5adde49febf059a6381268e7f9e48037321f882a63"
+    },
+    {
+      "path": "GDINA-master/docs/reference/GDINA-package.html",
+      "bytes": 9491,
+      "sha256": "c022ff19de77864e15019956150dd236e4ca6e386b7f694a548b745d291521aa"
+    },
+    {
+      "path": "GDINA-master/docs/reference/GDINA-package.md",
+      "bytes": 3892,
+      "sha256": "b8b5822ecc359cd7fc99d455eef5de68fa5e5875118b84b2b9fb4a10ad1aedf6"
+    },
+    {
+      "path": "GDINA-master/docs/reference/GDINA.html",
+      "bytes": 161559,
+      "sha256": "c159493c8c185493971a6222f972aa9cc5f740c8a1a00c627a235fc4b7db3383"
+    },
+    {
+      "path": "GDINA-master/docs/reference/GDINA.md",
+      "bytes": 48226,
+      "sha256": "250a4362a802cccaa9692d8174af96713dcbff59a4d02a554a5776170b00deb5"
+    },
+    {
+      "path": "GDINA-master/docs/reference/GMSCDM.html",
+      "bytes": 23485,
+      "sha256": "9487e85723dd2641b6943894e8b78113ca8e423749174a06f60a11b969be66d0"
+    },
+    {
+      "path": "GDINA-master/docs/reference/GMSCDM.md",
+      "bytes": 3835,
+      "sha256": "42e8fd37d4e5e9592ac888bfb96e0f79bf7dffab1988255c25027e78aed471b3"
+    },
+    {
+      "path": "GDINA-master/docs/reference/ILCA.html",
+      "bytes": 7892,
+      "sha256": "3fbfd0f898e12fddd1a992691e1dd44cb29fa43a9e4ca1386346a3de928586ce"
+    },
+    {
+      "path": "GDINA-master/docs/reference/ILCA.md",
+      "bytes": 763,
+      "sha256": "ffc8a9d56a6245f269182e8239a45445119f5c731530c69d1a5597eedf42a937"
+    },
+    {
+      "path": "GDINA-master/docs/reference/LC2LG.html",
+      "bytes": 10160,
+      "sha256": "59959dee4e9e0baa137439e7b745a7fee517697d39a7063c806ce874adbeb8a4"
+    },
+    {
+      "path": "GDINA-master/docs/reference/LC2LG.md",
+      "bytes": 1621,
+      "sha256": "61e650fb4ebdacc04503c23ea33d05e09fe786fc6be9f45f528c8e1ca63b78e7"
+    },
+    {
+      "path": "GDINA-master/docs/reference/MCmodel.html",
+      "bytes": 21536,
+      "sha256": "03fbfce44777d095d7650bd391ceb553c2fb2653e46b41125abc2af00f38c569"
+    },
+    {
+      "path": "GDINA-master/docs/reference/MCmodel.md",
+      "bytes": 5331,
+      "sha256": "4e5713a80301f9938c14349595f175f894b8171341401448ff7dc2749400c5c9"
+    },
+    {
+      "path": "GDINA-master/docs/reference/Qval.html",
+      "bytes": 22731,
+      "sha256": "44b151f91d84c0abeaa2fcecbf30230ae96198472eec25f29c75a3ea5d040752"
+    },
+    {
+      "path": "GDINA-master/docs/reference/Qval.md",
+      "bytes": 5499,
+      "sha256": "257e6af4cc9c21d839f2cd11b8ea8f4903a22235c4591453826b7e7eb78bc41d"
+    },
+    {
+      "path": "GDINA-master/docs/reference/Rplot001.png",
+      "bytes": 1011,
+      "sha256": "69a1e23f42a7fc9ff537d0d19a38b28a73276f3b6f00001d5c6a669a10c5930e"
+    },
+    {
+      "path": "GDINA-master/docs/reference/anova.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/att.structure.html",
+      "bytes": 18308,
+      "sha256": "6025435aced07d35f63d87f1a8568df761d57c8848ffbc6480f865f95299cac6"
+    },
+    {
+      "path": "GDINA-master/docs/reference/att.structure.md",
+      "bytes": 2529,
+      "sha256": "db21a40c098cf653b88907c580c1c6c01d6dd7f80f31c60b9edcbdf1eb9f9421"
+    },
+    {
+      "path": "GDINA-master/docs/reference/attributepattern.html",
+      "bytes": 12386,
+      "sha256": "2a3548853b511e7dbe5edec2fe4f13e1f01347aef81b31f3fff9500424f83411"
+    },
+    {
+      "path": "GDINA-master/docs/reference/attributepattern.md",
+      "bytes": 1569,
+      "sha256": "1b4b527b385c1fa41ae1fbfa519035e8661437979b465621c07e7966a55e603b"
+    },
+    {
+      "path": "GDINA-master/docs/reference/autoGDINA.html",
+      "bytes": 25087,
+      "sha256": "24cf9868401156e6dbe387efa2cbdeffbb5dba9a1dd079aeca00292ce2490389"
+    },
+    {
+      "path": "GDINA-master/docs/reference/autoGDINA.md",
+      "bytes": 7227,
+      "sha256": "861a361d567caeccb517ea8262a7b56c9f883eaf1273f787387d2cdc28784065"
+    },
+    {
+      "path": "GDINA-master/docs/reference/bdiagMatrix.html",
+      "bytes": 8187,
+      "sha256": "8ffb9014bbf034b9dc60fdcefd022c7d164efe55313ddeb79e58b394830b8a45"
+    },
+    {
+      "path": "GDINA-master/docs/reference/bdiagMatrix.md",
+      "bytes": 412,
+      "sha256": "7eeadc73fafc56f09fbe6fdd6e5b223d5f0f32d6f288717d82b44b7aa71599ad"
+    },
+    {
+      "path": "GDINA-master/docs/reference/bootSE.html",
+      "bytes": 10506,
+      "sha256": "fc60def7a150f51de6dcaaa4e641a34c8b3e3f748503917844fb6cb1f95d3346"
+    },
+    {
+      "path": "GDINA-master/docs/reference/bootSE.md",
+      "bytes": 1568,
+      "sha256": "f4e5426b187bfdd4a81a950bc9cd3e06d335a89c7d559a5447bf8822e06ea4e4"
+    },
+    {
+      "path": "GDINA-master/docs/reference/check_em_convergence.html",
+      "bytes": 6753,
+      "sha256": "0dcaccfbab0f41d6146cd5c748caf01c7f2ca5593c746027e6bcdae31afe8b76"
+    },
+    {
+      "path": "GDINA-master/docs/reference/check_em_convergence.md",
+      "bytes": 510,
+      "sha256": "01011d7ac43ddf32687157bc070ff99c0fb744d0d3267bcda3ebd9be83a3eb27"
+    },
+    {
+      "path": "GDINA-master/docs/reference/cjoint.html",
+      "bytes": 9837,
+      "sha256": "420ac228d5ef8adfbb00af3909c70e9fd181850cdce93b05df7b7c4f3e6586bb"
+    },
+    {
+      "path": "GDINA-master/docs/reference/cjoint.md",
+      "bytes": 782,
+      "sha256": "ee8de1db51fbaeaaa73f953fc4b87197b7db9a6e4acc3fda0beb2c6c9e97d27d"
+    },
+    {
+      "path": "GDINA-master/docs/reference/coef.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/designmatrix.html",
+      "bytes": 9416,
+      "sha256": "0892e46437df28cc1a16ec8d1959856142b9aa9bf1d5c5a10af59ae1acf41cec"
+    },
+    {
+      "path": "GDINA-master/docs/reference/designmatrix.md",
+      "bytes": 1288,
+      "sha256": "7eae4f0e19aca8c58396b36a5d25833986bd594b54cda06cf0873714a522721d"
+    },
+    {
+      "path": "GDINA-master/docs/reference/deviance.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/dif.html",
+      "bytes": 34263,
+      "sha256": "0d497a7aed760b7b047cd5b31d0123988f087266fb58a0bf8d8b07897acedb9e"
+    },
+    {
+      "path": "GDINA-master/docs/reference/dif.md",
+      "bytes": 6585,
+      "sha256": "ecaa70b3391c84594e5e4e6083599c6aae30e6cefb192b4ca39b72fe20f2a888"
+    },
+    {
+      "path": "GDINA-master/docs/reference/ecpe.html",
+      "bytes": 13611,
+      "sha256": "50fdc8866c1013802dbf7df465e9d43651a95c01b09452900103148adb67f574"
+    },
+    {
+      "path": "GDINA-master/docs/reference/extract.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/extract.Qval.html",
+      "bytes": 272,
+      "sha256": "6711f71f5c52f32b354a3acfc3a3f8276b0ddfcec8eccf49673aa82bb29634ac"
+    },
+    {
+      "path": "GDINA-master/docs/reference/extract.html",
+      "bytes": 15237,
+      "sha256": "195ffbf70ca178fc478897f386da9eb47e801787e9f649544a6fb4e3f0dd9b56"
+    },
+    {
+      "path": "GDINA-master/docs/reference/extract.itemfit.html",
+      "bytes": 278,
+      "sha256": "ec8195167d8c2ad157dbd2d47f38efa4ef2e6c1c4085d6905ae6fad1828ddf8d"
+    },
+    {
+      "path": "GDINA-master/docs/reference/extract.md",
+      "bytes": 2978,
+      "sha256": "7a09208b9b428046c02bd941af42c1ec6b8c709a9f42f6d4353bba8e81bc3969"
+    },
+    {
+      "path": "GDINA-master/docs/reference/extract.modelcomp.html",
+      "bytes": 282,
+      "sha256": "4169c258a333d0c44a1928f26fb5aac0645ab45813a6dd7b187b97dff8316ed8"
+    },
+    {
+      "path": "GDINA-master/docs/reference/extract.simGDINA.html",
+      "bytes": 280,
+      "sha256": "775e6edfed6cf979a72a37a83490ef7274a039726c753039e6428a65100d9706"
+    },
+    {
+      "path": "GDINA-master/docs/reference/frac20.html",
+      "bytes": 9398,
+      "sha256": "c0cd06c207fc9683ebd1aeba29c7d2612c32024408580fcdaddcbddd0829cefa"
+    },
+    {
+      "path": "GDINA-master/docs/reference/index.html",
+      "bytes": 14013,
+      "sha256": "b87fb9e029ed94b6124a4b765bdb28c64d313e75935fd33d3a098949b7f79784"
+    },
+    {
+      "path": "GDINA-master/docs/reference/index.md",
+      "bytes": 8171,
+      "sha256": "9cc51634dee5fd4d1de49957cdf77722f2bc2c7a417b35b4a1dc8cae8f2868ed"
+    },
+    {
+      "path": "GDINA-master/docs/reference/indlogLik.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/indlogLik.html",
+      "bytes": 7598,
+      "sha256": "c023de3b2996e39fc705a3db89a22705f79fde54f6bc6b10e7806cb2ae476f4f"
+    },
+    {
+      "path": "GDINA-master/docs/reference/indlogLik.md",
+      "bytes": 378,
+      "sha256": "dceb41bf5dac4ae169e7ab16a4540f7b8d58d84c1b2c254cbc2a1d08e62ae741"
+    },
+    {
+      "path": "GDINA-master/docs/reference/indlogPost.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/indlogPost.html",
+      "bytes": 7557,
+      "sha256": "75c3b3669e8bd1ac74b81b4ea3294c6832d92b99e9fea68580f3802db2b0e005"
+    },
+    {
+      "path": "GDINA-master/docs/reference/indlogPost.md",
+      "bytes": 377,
+      "sha256": "1a19340ca440fce7e81b25fed8a23eb5b4181924e2b001fd60c150ca5e5d8a27"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_constraint_matrices.html",
+      "bytes": 7010,
+      "sha256": "740e7adaa590107377602918327b556e4b928630533f1127ef3a0ee6d59c31b2"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_constraint_matrices.md",
+      "bytes": 588,
+      "sha256": "0fcaff1e2718d2ee95117d6a3e847563a64d702776009f6b02c9fb25ed949797"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_control.html",
+      "bytes": 7258,
+      "sha256": "daca1cc51db69ca8b518aab42b1bbb4861ef84117ce9387507b4e632acc62f9a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_control.md",
+      "bytes": 723,
+      "sha256": "ee0eedac40f8a8afe97afb4b000e5496229df6bc0b8026e69171c39725ff4df1"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_design_matrices.html",
+      "bytes": 7443,
+      "sha256": "3841868af60b5ce06a97f4f3dd538409d696a1c5cae5b91a1ed473e106b8072a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_design_matrices.md",
+      "bytes": 671,
+      "sha256": "df7e689863d771032e6b5528345ced52ca5a869e33ef67ccfbf7045ec967fd56"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_solver.html",
+      "bytes": 6109,
+      "sha256": "59e316236f100936159d44c991f33ebd70af80afc3776616612943fd60e0ed5d"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_solver.md",
+      "bytes": 273,
+      "sha256": "dccb328d0b1d5ed6e2edbe8025ee88044d9830610389e709c76e6e70c4823d38"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_solver_args.html",
+      "bytes": 6432,
+      "sha256": "12872c0687a21bb4d4ed9dda9358eeaf353ee7c9ffc877d0a66f388b18fff425"
+    },
+    {
+      "path": "GDINA-master/docs/reference/init_solver_args.md",
+      "bytes": 390,
+      "sha256": "740bed74b9a1a8857b31973561d99a16b9c37d36bfc240cb6964b568181c4579"
+    },
+    {
+      "path": "GDINA-master/docs/reference/itemfit.html",
+      "bytes": 17050,
+      "sha256": "d1b454c99152531499b41c420abe880d1fe83ddbe8f25ed71f9da4d5f7a6db68"
+    },
+    {
+      "path": "GDINA-master/docs/reference/itemfit.md",
+      "bytes": 4263,
+      "sha256": "dfe2d099d0751925f52b335184785a402bf7c9b83cae7f43a1fbc6a77e4d1c92"
+    },
+    {
+      "path": "GDINA-master/docs/reference/itemfitPD.html",
+      "bytes": 13687,
+      "sha256": "55f5b2925c119cdb6d761ed8915f5865ac7c55c95a60fcdfedb68b9f93b2138c"
+    },
+    {
+      "path": "GDINA-master/docs/reference/itemfitPD.md",
+      "bytes": 2690,
+      "sha256": "a2e9529754bc552bb7f4167594192c96ac5c721309503305499beae2c020dd5e"
+    },
+    {
+      "path": "GDINA-master/docs/reference/itemparm.GDINA.html",
+      "bytes": 280,
+      "sha256": "3053e7afbea4b1d055e47354bf46d1dd115e3bf1e00c60c2710553e175a82dd8"
+    },
+    {
+      "path": "GDINA-master/docs/reference/itemparm.html",
+      "bytes": 10237,
+      "sha256": "9857348bce1382cd084cf6c938723e030343f25069a12070924952f57cb88efb"
+    },
+    {
+      "path": "GDINA-master/docs/reference/itemparm.md",
+      "bytes": 1157,
+      "sha256": "8178db975b349f4418134f7454ac5ad782c33e48eb823221dde63c96e3b3ea6e"
+    },
+    {
+      "path": "GDINA-master/docs/reference/logLik.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/modelcomp.html",
+      "bytes": 27303,
+      "sha256": "c5651cb6cbe5a9a1d86c182c98b993b046d6b9668732353254e047582b88b82d"
+    },
+    {
+      "path": "GDINA-master/docs/reference/modelcomp.md",
+      "bytes": 8124,
+      "sha256": "5c1256951323e5fa9dd502b3833df68197f13f8e5f774679d8d7bfd787255cb2"
+    },
+    {
+      "path": "GDINA-master/docs/reference/modelfit.html",
+      "bytes": 9421,
+      "sha256": "3e2db44f5a8f5dbfc68757f8d5dcd7d9e2a1da192702aee94ddac5e6d7c3cdd0"
+    },
+    {
+      "path": "GDINA-master/docs/reference/modelfit.md",
+      "bytes": 1790,
+      "sha256": "290a1dff33092f8198b99114531c233b92fc0393258608527bd5a8ddb07ae734"
+    },
+    {
+      "path": "GDINA-master/docs/reference/monocheck.html",
+      "bytes": 8894,
+      "sha256": "1b63e8a4eb72147ada9472f8d96e952299d25ec81fa9e9097ce4bbea409e443f"
+    },
+    {
+      "path": "GDINA-master/docs/reference/monocheck.md",
+      "bytes": 800,
+      "sha256": "af51df1c7b92d034270ea59e32287ead2ea4ad5cc61a22d76baa54c98437bbba"
+    },
+    {
+      "path": "GDINA-master/docs/reference/nobs.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/npar.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/npar.html",
+      "bytes": 7753,
+      "sha256": "55c1a0d16d5d15f33040615cbc639825ab1412c868511d85561114af21d0acaa"
+    },
+    {
+      "path": "GDINA-master/docs/reference/npar.md",
+      "bytes": 496,
+      "sha256": "2a49bb78eb2e4df68cd5599af9f3ec2e1d53fb6e9093e2e6e8cebbb752d8decd"
+    },
+    {
+      "path": "GDINA-master/docs/reference/pairwiseDIF.html",
+      "bytes": 16695,
+      "sha256": "169ce7b7bbc79c7908948c4689716fa62b549122b77c17d00871f083b5a1297e"
+    },
+    {
+      "path": "GDINA-master/docs/reference/pairwiseDIF.md",
+      "bytes": 2830,
+      "sha256": "2272e68d237fc43423da5d145ec7bd1528dbebb1126025c9999cf2bc54b93016"
+    },
+    {
+      "path": "GDINA-master/docs/reference/personparm.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/personparm.html",
+      "bytes": 10611,
+      "sha256": "eb1ea12ab539fd6bebaaf13bd8532efaeb028b35af805c9d3e97e2889d9a15e4"
+    },
+    {
+      "path": "GDINA-master/docs/reference/personparm.md",
+      "bytes": 1523,
+      "sha256": "317db66ef632f1d8488f877f7d62b1b385f9f76904afa213b8763f8cd8d0268f"
+    },
+    {
+      "path": "GDINA-master/docs/reference/plot.GDINA.html",
+      "bytes": 11611,
+      "sha256": "3ddb199fe901f2f918e42fdb3587ccaa06689f1eb547fca6544db7d5d6adff95"
+    },
+    {
+      "path": "GDINA-master/docs/reference/plot.GDINA.md",
+      "bytes": 1548,
+      "sha256": "1eea106ba0a1564222512d45cccd064509483f2e71f56d179d37ecba990babe7"
+    },
+    {
+      "path": "GDINA-master/docs/reference/plot.Qval.html",
+      "bytes": 12938,
+      "sha256": "d31ad97307b663a23f7121999e736f8cbf8f8abcdc825d2969b0d6bfdc325ddc"
+    },
+    {
+      "path": "GDINA-master/docs/reference/plot.Qval.md",
+      "bytes": 2153,
+      "sha256": "bf901c3254511977576474e4b206776fb9fdabe604de7b9d316a2e01dc90971d"
+    },
+    {
+      "path": "GDINA-master/docs/reference/plot.itemfit.html",
+      "bytes": 9066,
+      "sha256": "7dc12293674085d5fa3304fbed7d116cc287fbcd14f042996bfb5ec623d7d5aa"
+    },
+    {
+      "path": "GDINA-master/docs/reference/plot.itemfit.md",
+      "bytes": 826,
+      "sha256": "d14e78dec1659713eeae717ca1e162d986572f92c09d9834a3b10d32ecbccb03"
+    },
+    {
+      "path": "GDINA-master/docs/reference/plot.pairwiseDIF.html",
+      "bytes": 7445,
+      "sha256": "c24c684f9601b9347299c8d7589866d6c60d655cf987dedc75c81620974e78f6"
+    },
+    {
+      "path": "GDINA-master/docs/reference/plot.pairwiseDIF.md",
+      "bytes": 913,
+      "sha256": "d5102563f8300eecc4c953a4508c6f442bd1780a09286565133a8da526667ae1"
+    },
+    {
+      "path": "GDINA-master/docs/reference/print_em_progress.html",
+      "bytes": 6307,
+      "sha256": "0c1892509dbab187c313ccf58a920b4fd9fc5a724a3031f58a1f38f998dbf59c"
+    },
+    {
+      "path": "GDINA-master/docs/reference/print_em_progress.md",
+      "bytes": 317,
+      "sha256": "5bf9648e6a7f8fcb7c91b122c47efcab7e761a5931b2b2892e83707e7f662f8b"
+    },
+    {
+      "path": "GDINA-master/docs/reference/realdata_ECPE.html",
+      "bytes": 13499,
+      "sha256": "9a61ac746d363d274ad5e9468ac0a018044688680751e6eb6f040fb31af390ec"
+    },
+    {
+      "path": "GDINA-master/docs/reference/realdata_ECPE.md",
+      "bytes": 2321,
+      "sha256": "a3c704cbc5757f006e80fc0d679f06cbdca462e2b44045f7aff10225a2b64593"
+    },
+    {
+      "path": "GDINA-master/docs/reference/realdata_Tatsuoka1990.html",
+      "bytes": 9474,
+      "sha256": "b08d3f9cf8e9d988856ab425bcab46a9ebbb5c904526cd6e0c28cf8c6ce2fca2"
+    },
+    {
+      "path": "GDINA-master/docs/reference/realdata_Tatsuoka1990.md",
+      "bytes": 1327,
+      "sha256": "99cf3edb781ca8cd614a934349ee5b7be5530db70aac368885782c32a59097b1"
+    },
+    {
+      "path": "GDINA-master/docs/reference/rowMatch.html",
+      "bytes": 8297,
+      "sha256": "78d9bcaeef70fb7367c11dc409fa73b8ab3544a1f089abe90a23ed107e233505"
+    },
+    {
+      "path": "GDINA-master/docs/reference/rowMatch.md",
+      "bytes": 509,
+      "sha256": "2e3824ef322f823ec7241006862ced70f11d7223b7f12fb0716056974d868e04"
+    },
+    {
+      "path": "GDINA-master/docs/reference/score.html",
+      "bytes": 8061,
+      "sha256": "d29f862edaab7468dabc35141bb696b1c287a0d4a078c069593880a4bc25d64b"
+    },
+    {
+      "path": "GDINA-master/docs/reference/score.md",
+      "bytes": 651,
+      "sha256": "dd0c33df9cc60b59519ab9c15d63367955eebf0ae41df6e24b1536f8111d80d5"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim10GDINA.html",
+      "bytes": 6654,
+      "sha256": "419beb5665a7bb58db647a5602634103476d105833ab38cc4dd554645c516ede"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim10GDINA.md",
+      "bytes": 604,
+      "sha256": "d57d161ef5be91662cd2340aa26e76b3e64fb2e7e0982680474dbd1a311570e0"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim10MCDINA.html",
+      "bytes": 6554,
+      "sha256": "f9460419c91b3ada9cd600cf3b325a7ced563f4ffe6fbd68ceeff7d1daf68e50"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim10MCDINA.md",
+      "bytes": 515,
+      "sha256": "6059baea6aeafef3b449a3245a1ac7b5e52aace1f762d43276a0e05f726d72a4"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim10MCDINA2.html",
+      "bytes": 6560,
+      "sha256": "e003e5021e2391e03aa8f566752afa80306e7e7e20cdf435f22c6d4dc4840aff"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim10MCDINA2.md",
+      "bytes": 516,
+      "sha256": "b95e972744e820dde9a542dac9c16236bd84b357015eac32bd93d1d932690871"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim20seqGDINA.html",
+      "bytes": 6750,
+      "sha256": "c298cf9ea3a3a6158bedaab1a67b3c61a5a1364a6c25232d7feff9b1fdb8face"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim20seqGDINA.md",
+      "bytes": 651,
+      "sha256": "91d650112d139a9b7ae855e0bdeba50c01fbe03af3a31317561fbe23d171eab5"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim21seqDINA.html",
+      "bytes": 6540,
+      "sha256": "7319b3b5ccb8ec7be41262a3ea499e6f021fc71ab5433cec1eed304530edbe47"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim21seqDINA.md",
+      "bytes": 510,
+      "sha256": "e6a790541e2a9a2e9e0657306aec9741e858c0c16d78330a01dd5ccc222e3d08"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim30DINA.html",
+      "bytes": 6657,
+      "sha256": "1ae29366b4a32941a14deb9a3861de63b5a4e2d5dc47ee0ef8d6e5969a42bdf7"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim30DINA.md",
+      "bytes": 606,
+      "sha256": "39151403a9b9b90ee96cc16dfa98c28440bc2ef5000c8ca767f340a4437ed508"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim30GDINA.html",
+      "bytes": 6684,
+      "sha256": "c98c1a9aa401fdaf0b0d540776ccbaea55351705eec3a32295658a9ca2b4ac79"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim30GDINA.md",
+      "bytes": 624,
+      "sha256": "43a951979b1ea51b9ca241c6d17fa328a3f92376508e50e03b4c786eb7f50950"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim30pGDINA.html",
+      "bytes": 6173,
+      "sha256": "c7e792de9cd9cc3c0170e7392702591ba6a59f2f89767f21c2921f0a0ab16712"
+    },
+    {
+      "path": "GDINA-master/docs/reference/sim30pGDINA.md",
+      "bytes": 400,
+      "sha256": "245342f96f3c732ae8cd4583a10e6fc9199bdc495f38e03da001cd7582aeff80"
+    },
+    {
+      "path": "GDINA-master/docs/reference/simDTM.html",
+      "bytes": 17080,
+      "sha256": "deaa2b26b47c7f1a72180d00f68698a6b6f11ab8d1c8a71f3e95fe87baeb4064"
+    },
+    {
+      "path": "GDINA-master/docs/reference/simDTM.md",
+      "bytes": 1637,
+      "sha256": "8c2056a70f6ed99629ef3f32c1202c59d287abe4073f761cf7140ef034122f89"
+    },
+    {
+      "path": "GDINA-master/docs/reference/simGDINA.html",
+      "bytes": 102713,
+      "sha256": "2892cf961407a37abf89795b1cc04e0fe9ef3cf7a17963ec660e905388327b31"
+    },
+    {
+      "path": "GDINA-master/docs/reference/simGDINA.md",
+      "bytes": 24720,
+      "sha256": "2bd2e80b07117e3061d5f5095d42bb49a08e7b85652cb42b71ff2615cc39f800"
+    },
+    {
+      "path": "GDINA-master/docs/reference/startGDINA.html",
+      "bytes": 7944,
+      "sha256": "5987bd5cfed3c47631951ff978d4e065f6643d716138b136ba03072b9f4cfada"
+    },
+    {
+      "path": "GDINA-master/docs/reference/startGDINA.md",
+      "bytes": 877,
+      "sha256": "30b2a924d32f9e405cd32338ce624c05796804941e7798f8e153ef6016b07f33"
+    },
+    {
+      "path": "GDINA-master/docs/reference/summary.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/summary.Qval.html",
+      "bytes": 272,
+      "sha256": "6711f71f5c52f32b354a3acfc3a3f8276b0ddfcec8eccf49673aa82bb29634ac"
+    },
+    {
+      "path": "GDINA-master/docs/reference/summary.autoGDINA.html",
+      "bytes": 282,
+      "sha256": "9c68201da751c7ed568501eee010fb79caad287af54db76d61f87adf08ce7eb7"
+    },
+    {
+      "path": "GDINA-master/docs/reference/summary.dif.html",
+      "bytes": 270,
+      "sha256": "7551e09dc0daac91e3d129b6edab433742f9feb8acdee0b7f0b10115a2d56f68"
+    },
+    {
+      "path": "GDINA-master/docs/reference/summary.itemfit.html",
+      "bytes": 278,
+      "sha256": "ec8195167d8c2ad157dbd2d47f38efa4ef2e6c1c4085d6905ae6fad1828ddf8d"
+    },
+    {
+      "path": "GDINA-master/docs/reference/summary.modelcomp.html",
+      "bytes": 282,
+      "sha256": "4169c258a333d0c44a1928f26fb5aac0645ab45813a6dd7b187b97dff8316ed8"
+    },
+    {
+      "path": "GDINA-master/docs/reference/tan2023.html",
+      "bytes": 8600,
+      "sha256": "9e343b9b64d6b1f682559f31cc1181ec638af37dbd54a278ffa1a06147eaf7ec"
+    },
+    {
+      "path": "GDINA-master/docs/reference/tan2023p25.html",
+      "bytes": 9107,
+      "sha256": "7e9a110189b0a0fd42fece0c85676852deb9f6d36dc44119f5b381f8cf820540"
+    },
+    {
+      "path": "GDINA-master/docs/reference/tan2023p50.html",
+      "bytes": 9107,
+      "sha256": "597f9bcf70eac31141e34f09910960e948e5fd674e72c013e18d1f36c3b6847a"
+    },
+    {
+      "path": "GDINA-master/docs/reference/unique_only.html",
+      "bytes": 8031,
+      "sha256": "73e5605e2593b685332309014e0bb02b9a9fd94f3427c7ae6d8b08de7870a3dc"
+    },
+    {
+      "path": "GDINA-master/docs/reference/unique_only.md",
+      "bytes": 423,
+      "sha256": "b6dc0082bfe5d0e8306844ab3b763a5f97328ddf36c6445c8c2469f13721eac4"
+    },
+    {
+      "path": "GDINA-master/docs/reference/unrestrQ.html",
+      "bytes": 14082,
+      "sha256": "4204b6c015e10093e77cc37a03e467eb731c160cb6bbc3d4590bcad4e112f9a3"
+    },
+    {
+      "path": "GDINA-master/docs/reference/unrestrQ.md",
+      "bytes": 2770,
+      "sha256": "8d2601facac7883f4063e8eff758894a240439151a7a7bbd60daadacdd88ba33"
+    },
+    {
+      "path": "GDINA-master/docs/reference/vcov.GDINA.html",
+      "bytes": 274,
+      "sha256": "0b8eb1ce53d985f413bfc46ee2c5a8ee2327b616d45e8ab494289d46d459a79a"
+    },
+    {
+      "path": "GDINA-master/docs/search.json",
+      "bytes": 369496,
+      "sha256": "09e444dac5cea757a3bcd84060378859f981af368600ced79df9592eb7068ad5"
+    },
+    {
+      "path": "GDINA-master/docs/sitemap.xml",
+      "bytes": 6492,
+      "sha256": "976a22c219c8e8fbc2995ae3099db1f9840e2f1a409e27c1c9d36cf087c032d1"
+    },
+    {
+      "path": "GDINA-master/inst/CITATION",
+      "bytes": 649,
+      "sha256": "262180fafbbb69c14ed7929b1aaf704331e8f159d0724d6388f4916c016c61d7"
+    },
+    {
+      "path": "GDINA-master/inst/shiny/Data.csv",
+      "bytes": 28065,
+      "sha256": "838d7b9718c682f39d9ce0ba4eb1945691e749ea21b981f686230628955d0028"
+    },
+    {
+      "path": "GDINA-master/inst/shiny/rsconnect/shinyapps.io/wenchaoma/GDINA.dcf",
+      "bytes": 244,
+      "sha256": "a8b92f4007e083aa48c466ce29536e8c1a87ef1da05159cb9e61192087b67a09"
+    },
+    {
+      "path": "GDINA-master/inst/shiny/server.R",
+      "bytes": 23100,
+      "sha256": "c2f9442a756209d2a1991293ef837aeb5d8e0442b780284c413d806f5aed3b6a"
+    },
+    {
+      "path": "GDINA-master/inst/shiny/ui.R",
+      "bytes": 21202,
+      "sha256": "765b6019d0ce7105cdf6a0a361eb5a82f647112c92ae0bd81ba2f1fe2870a2d0"
+    },
+    {
+      "path": "GDINA-master/man/CA.Rd",
+      "bytes": 2007,
+      "sha256": "40fe9d956a711bc357bd3a2c5794ea1231ddba2e5c95857a5cb83574532f1837"
+    },
+    {
+      "path": "GDINA-master/man/CM.Rd",
+      "bytes": 1985,
+      "sha256": "4259cdb556cd5ff49c74df13b6d78f12b1c311cfb2fe679a5da4a7e694b78ce4"
+    },
+    {
+      "path": "GDINA-master/man/ClassRate.Rd",
+      "bytes": 1606,
+      "sha256": "914f10da732540ece423afe4240a47109af1592af479b39451f1d600ade223dc"
+    },
+    {
+      "path": "GDINA-master/man/DTM.Rd",
+      "bytes": 3682,
+      "sha256": "31e657f5509347a59cd8512917e1594aa7aee85332b8052cf048573f497f9e95"
+    },
+    {
+      "path": "GDINA-master/man/GDINA-package.Rd",
+      "bytes": 3679,
+      "sha256": "3d7c11d7d36fc050d9eb21e8d2945bd47e100909ec1aa881b4bdca4d8b44a566"
+    },
+    {
+      "path": "GDINA-master/man/GDINA.Rd",
+      "bytes": 48394,
+      "sha256": "3976851dcebbced1b246c959f11c668808c22f35fbccb90c9aace709f229e5c4"
+    },
+    {
+      "path": "GDINA-master/man/GMSCDM.Rd",
+      "bytes": 3909,
+      "sha256": "81acc64e8117d15cf8626c4e9f8c3ae1b84ad89381bd1f5eaa98e41c1fdaa4b3"
+    },
+    {
+      "path": "GDINA-master/man/ILCA.Rd",
+      "bytes": 860,
+      "sha256": "8a9416e18ff5e4bfa1a2fcb9001ad92b2c8c478f2695b8a46f0e94d0e8828469"
+    },
+    {
+      "path": "GDINA-master/man/LC2LG.Rd",
+      "bytes": 1376,
+      "sha256": "6c82a14061215259afc752f024f993849435a52296c64fae37d5ef63151d7d65"
+    },
+    {
+      "path": "GDINA-master/man/MCmodel.Rd",
+      "bytes": 5359,
+      "sha256": "77021d1ae9d6f1119bb36b43eb26ff08067d6f417bf8b8e6ec89ff37bda16c2c"
+    },
+    {
+      "path": "GDINA-master/man/Qval.Rd",
+      "bytes": 5742,
+      "sha256": "00fda07147374773a7faf5247ca78e65ba6f03fd5b4eacfcd2df9edf23f62f5f"
+    },
+    {
+      "path": "GDINA-master/man/att.structure.Rd",
+      "bytes": 2574,
+      "sha256": "5522241ea421cad7dff480e65695323812cc05e758600418897fb2820510a4b8"
+    },
+    {
+      "path": "GDINA-master/man/attributepattern.Rd",
+      "bytes": 894,
+      "sha256": "076793cc638f302b9dc8ab19cbeef10ba6dd83a5ffa0d9f2a09674bea5ed4639"
+    },
+    {
+      "path": "GDINA-master/man/autoGDINA.Rd",
+      "bytes": 7090,
+      "sha256": "022de5f6f67a3e63432eac330716a5c125051d57f3bf6ebfc539134a84ec06ec"
+    },
+    {
+      "path": "GDINA-master/man/bdiagMatrix.Rd",
+      "bytes": 557,
+      "sha256": "41188967d0abbd14b47182f92a258138de110e8e5b7fd89caad0a0db55120708"
+    },
+    {
+      "path": "GDINA-master/man/bootSE.Rd",
+      "bytes": 1699,
+      "sha256": "86f16db1bb585393c143d5bffb000657218492b5662ab68683d3fb1923f79752"
+    },
+    {
+      "path": "GDINA-master/man/check_em_convergence.Rd",
+      "bytes": 700,
+      "sha256": "7ab8ccc2f3315c0e724fea33d4ed8deb4eccf4fea8af60d6406edf7cb4ae589f"
+    },
+    {
+      "path": "GDINA-master/man/cjoint.Rd",
+      "bytes": 665,
+      "sha256": "b964cd0b0274e2da0920c418ce66cdcfcded4cdea4450ddb2aabd2e135a4416c"
+    },
+    {
+      "path": "GDINA-master/man/designmatrix.Rd",
+      "bytes": 1398,
+      "sha256": "8693163a020b083de0ae50b9a37458ad096258a3b7079ade509e72dbfca731a5"
+    },
+    {
+      "path": "GDINA-master/man/dif.Rd",
+      "bytes": 6834,
+      "sha256": "ece2970fd699eea35bd0b5bec5a9082726972dfd2f40974c1be972a4d98da6eb"
+    },
+    {
+      "path": "GDINA-master/man/extract.Rd",
+      "bytes": 3084,
+      "sha256": "daf6e1f99b1da05b2c0a7aa3b7a7bad59c918cbfe395ff89e6831df887586542"
+    },
+    {
+      "path": "GDINA-master/man/indlogLik.Rd",
+      "bytes": 484,
+      "sha256": "f98b637074a618d21580411cea4193899062dc2f6b6d74544df0b508508ec858"
+    },
+    {
+      "path": "GDINA-master/man/indlogPost.Rd",
+      "bytes": 485,
+      "sha256": "abe84c8486be5ff5c726564d29e37ded874a2ab8c803d2cb3827a364886b7998"
+    },
+    {
+      "path": "GDINA-master/man/init_constraint_matrices.Rd",
+      "bytes": 785,
+      "sha256": "e28f22aac8b4ab35f84cb338c97a05862d9adae9a5a37b1bcb75d9252672dbd7"
+    },
+    {
+      "path": "GDINA-master/man/init_control.Rd",
+      "bytes": 895,
+      "sha256": "0055dea4361293e0e543c69511f95e3ede852a724c183e58dbc1c24a6c778f6f"
+    },
+    {
+      "path": "GDINA-master/man/init_design_matrices.Rd",
+      "bytes": 868,
+      "sha256": "33f737d9a35e4606d481011291f9c1de128e1ce3155d4fc6ede03022dfe7c2a6"
+    },
+    {
+      "path": "GDINA-master/man/init_solver.Rd",
+      "bytes": 440,
+      "sha256": "b0a237c7bf01c3db4f3e937d599c420a472d6664098ffc4a26745a94d5e224f4"
+    },
+    {
+      "path": "GDINA-master/man/init_solver_args.Rd",
+      "bytes": 569,
+      "sha256": "39b4773f804dbc31fc5dc2dc61f0a6ef11b02e088e41dec06b61d3760bf5d70a"
+    },
+    {
+      "path": "GDINA-master/man/itemfit.Rd",
+      "bytes": 4548,
+      "sha256": "9ba39b3582de5266561e99f19d9a1b4972cc4a3bf66cb1402065e8527fb1a0ae"
+    },
+    {
+      "path": "GDINA-master/man/itemfitPD.Rd",
+      "bytes": 2853,
+      "sha256": "68794cb175b50ebff38d57a1c6091490dbe6f34dd46e5ce2e6333b9115b1a45f"
+    },
+    {
+      "path": "GDINA-master/man/itemparm.Rd",
+      "bytes": 1248,
+      "sha256": "185d20ab7eaa204f073777685b3c1eececa83dc89ff5f5fa7cc1e35201b54249"
+    },
+    {
+      "path": "GDINA-master/man/modelcomp.Rd",
+      "bytes": 8493,
+      "sha256": "3461845b77826c505577b7ea7e6ea9fa338d50ea22507b1bc36e686798eb08e7"
+    },
+    {
+      "path": "GDINA-master/man/modelfit.Rd",
+      "bytes": 1921,
+      "sha256": "f050aeee5ade5e2984458b846931859f2765ed46cbd74c538193f1c2a2e7f6e2"
+    },
+    {
+      "path": "GDINA-master/man/monocheck.Rd",
+      "bytes": 870,
+      "sha256": "8fb3a478f30f081d228fc200b8ec24e06113d0d9aa855f5f230bae74fa70c8c3"
+    },
+    {
+      "path": "GDINA-master/man/npar.Rd",
+      "bytes": 592,
+      "sha256": "7e6c6fd2e83cced30d514a4341d11180db10833b1d179a709c860a7b2ac60e31"
+    },
+    {
+      "path": "GDINA-master/man/pairwiseDIF.Rd",
+      "bytes": 4095,
+      "sha256": "b3413fed8be342cb041767deb0986c95bc86f92fae1d54568c9a15191c4d2548"
+    },
+    {
+      "path": "GDINA-master/man/personparm.Rd",
+      "bytes": 1610,
+      "sha256": "15d21687d29e22c6263b3b941f64f09a7e4c04f067b646e4658f3fcdf0b0fa1e"
+    },
+    {
+      "path": "GDINA-master/man/plot.GDINA.Rd",
+      "bytes": 1519,
+      "sha256": "bb280aeddda3e2845bb731fbf76cc59f3e41a4eb6e1c8f484c3059a8c5f281aa"
+    },
+    {
+      "path": "GDINA-master/man/plot.Qval.Rd",
+      "bytes": 2200,
+      "sha256": "bce2a24b1eb68bb5c7b02b1fbdc1e22170e033fa20e838d991770e1462ab130a"
+    },
+    {
+      "path": "GDINA-master/man/plot.itemfit.Rd",
+      "bytes": 845,
+      "sha256": "b5612b47a728dd4cdc60b6212747ac043a707baf3bf3f5940b2b225a6028bedd"
+    },
+    {
+      "path": "GDINA-master/man/plot.pairwiseDIF.Rd",
+      "bytes": 852,
+      "sha256": "ddc6cb87c017ab48c00aeea299e215e0cd29ae9c5237bab98248cbe853fcbf04"
+    },
+    {
+      "path": "GDINA-master/man/print_em_progress.Rd",
+      "bytes": 501,
+      "sha256": "e51ff63f2ca82b6cd071fe694bf1929c259da586a1b5d9ed1e5dd9ea57c9fff5"
+    },
+    {
+      "path": "GDINA-master/man/realdata_ECPE.Rd",
+      "bytes": 2522,
+      "sha256": "a308784e81eee0538cedff7a5bc2843ac6cd78fb159e49709c9db99ba56cae7e"
+    },
+    {
+      "path": "GDINA-master/man/realdata_Tatsuoka1990.Rd",
+      "bytes": 1542,
+      "sha256": "f348cc96741623b12d390ff0959b78e704fc1071661baa8b92a42b12882989b0"
+    },
+    {
+      "path": "GDINA-master/man/rowMatch.Rd",
+      "bytes": 590,
+      "sha256": "9c569f59a547fb6b2c84bdc66380fa2db746aa26a6c849801c0f55a65a5fa306"
+    },
+    {
+      "path": "GDINA-master/man/score.Rd",
+      "bytes": 763,
+      "sha256": "53f6dc7ed8d549e595ad62cb3dadc11d59ebc9e9971239857b59dae5dd2bfa59"
+    },
+    {
+      "path": "GDINA-master/man/sim10GDINA.Rd",
+      "bytes": 813,
+      "sha256": "ea0ee917f4ce7017b7f8e2197466ff224a623f3e2ecda9ed061955ef08b9ca0a"
+    },
+    {
+      "path": "GDINA-master/man/sim10MCDINA.Rd",
+      "bytes": 723,
+      "sha256": "7a4a8dcd27257b41bf5f39c3c8d9f3c394db3ef6738b48ddcc537d3adbbd0dc8"
+    },
+    {
+      "path": "GDINA-master/man/sim10MCDINA2.Rd",
+      "bytes": 727,
+      "sha256": "12865ead451cf4ebf8b587480c1013b3f7d4f0307e253f668f96d7068cd4f436"
+    },
+    {
+      "path": "GDINA-master/man/sim20seqGDINA.Rd",
+      "bytes": 869,
+      "sha256": "1e639bf8706ef6d8f4f45a7062c3eb2458369d70dc17d2700800dc834798a3dc"
+    },
+    {
+      "path": "GDINA-master/man/sim21seqDINA.Rd",
+      "bytes": 721,
+      "sha256": "97e173a3a82954ffc2c3363eb207d9f7b8cc3074db35a7fb414243e328c6721a"
+    },
+    {
+      "path": "GDINA-master/man/sim30DINA.Rd",
+      "bytes": 812,
+      "sha256": "262703554f7d5d7741c223f4b3079cf73c46a6db7f0344b0990318cdc205c2dd"
+    },
+    {
+      "path": "GDINA-master/man/sim30GDINA.Rd",
+      "bytes": 835,
+      "sha256": "0ecb72de1245e11972039dcfeaabc0655d4c15a96e5fcaad709d74e72876bd0c"
+    },
+    {
+      "path": "GDINA-master/man/sim30pGDINA.Rd",
+      "bytes": 603,
+      "sha256": "1221723e57832de98046095f36db0753e5fdeab376f682134f4086711ed32f62"
+    },
+    {
+      "path": "GDINA-master/man/simDTM.Rd",
+      "bytes": 1732,
+      "sha256": "194529037ead592f455a04241712d5a88ca70165cd0c90c45076fbdf42f367ef"
+    },
+    {
+      "path": "GDINA-master/man/simGDINA.Rd",
+      "bytes": 25187,
+      "sha256": "315171028154a88f23b4e87dad2e84a7c9621dfa0e2345e3e7bb19ffc0faf6c2"
+    },
+    {
+      "path": "GDINA-master/man/startGDINA.Rd",
+      "bytes": 1005,
+      "sha256": "40f0e78716954bf7b2c1302a5617074999c97c31873895facb2246baff678c04"
+    },
+    {
+      "path": "GDINA-master/man/unique_only.Rd",
+      "bytes": 475,
+      "sha256": "91f67cde4a41d0bb4e1ffb49f773e2cd473f3e5fbde6970ea1f4565e0e27c0ed"
+    },
+    {
+      "path": "GDINA-master/man/unrestrQ.Rd",
+      "bytes": 438,
+      "sha256": "8ad168d49a59ec524d1f1ccad8c205de1c2826daa967ebb809f46e739c37c366"
+    },
+    {
+      "path": "GDINA-master/src/Lik.cpp",
+      "bytes": 15343,
+      "sha256": "2a7110776306ff90f3df8f4264eb8eed7412df018b439fc3af7be02ffd1b4be1"
+    },
+    {
+      "path": "GDINA-master/src/Lik2.cpp",
+      "bytes": 10295,
+      "sha256": "d798410e134db64882666d997344130a6eb43fe3918e2b92ccd4c5f4681f2788"
+    },
+    {
+      "path": "GDINA-master/src/LouisC.cpp",
+      "bytes": 4337,
+      "sha256": "8b9593202af9fa36fb32103e76f610d0fd01578021c9b2a5f8ff6049ec32ef01"
+    },
+    {
+      "path": "GDINA-master/src/Makevars",
+      "bytes": 95,
+      "sha256": "e998dd146e5576c93066cbf4e31f505b380954406357cdad38a5ab37889950ee"
+    },
+    {
+      "path": "GDINA-master/src/Makevars.win",
+      "bytes": 89,
+      "sha256": "fdd1a2ee587b91d54c5934bb0b21a29e45002f2070e58ec3af18d9da233276a3"
+    },
+    {
+      "path": "GDINA-master/src/Mord.cpp",
+      "bytes": 7189,
+      "sha256": "b681ebf90f96d2eaa2286a9c4d8221c1ee2effadd347944923086593810c4c74"
+    },
+    {
+      "path": "GDINA-master/src/Mstep.cpp",
+      "bytes": 7471,
+      "sha256": "29c4fd563f3ddc2fb2299d13f88c0df809d694cfef903096b9aca2058678eebf"
+    },
+    {
+      "path": "GDINA-master/src/NgRg.cpp",
+      "bytes": 2293,
+      "sha256": "d2abdca6fb91e08dced3647799a909711bbf8031075f828ee41f38295bad4be2"
+    },
+    {
+      "path": "GDINA-master/src/RcppExports.cpp",
+      "bytes": 41461,
+      "sha256": "7e1902f12baaeffadd970037a417c2c006f7a9d4054d035431f1680e45f9c88a"
+    },
+    {
+      "path": "GDINA-master/src/SE.cpp",
+      "bytes": 4125,
+      "sha256": "a55200642c43ace85ef2dc543ebc3e5b68a542569ac1a76d7d8dde8f5a07652d"
+    },
+    {
+      "path": "GDINA-master/src/aggregateCol.cpp",
+      "bytes": 506,
+      "sha256": "4c40fe702f3b81ab39e278303c7610ad463b5a473f357fc973a813c46233cf2f"
+    },
+    {
+      "path": "GDINA-master/src/fitstats.cpp",
+      "bytes": 4246,
+      "sha256": "a334c91449ca03a2b9586c8294d3d214699362e96bd64ebf1c5c45de71288457"
+    },
+    {
+      "path": "GDINA-master/src/scorep.cpp",
+      "bytes": 2602,
+      "sha256": "2c93796969c6557a9f65f1fbca33e6879cb7da9db7135f67c7531b3c688e7ab8"
+    },
+    {
+      "path": "GDINA-master/src/sequP.cpp",
+      "bytes": 1493,
+      "sha256": "51bf209bc632ea64f9329d882e96b8895f4531cf62d0815724ceb747bb5a27a1"
+    },
+    {
+      "path": "GDINA-master/src/util.cpp",
+      "bytes": 13641,
+      "sha256": "324518fa3fc134914465fe57f88a112d60a7dd1e57a23c3fcdbb66f269aef6b3"
+    },
+    {
+      "path": "GDINA-master/src/varsigma.cpp",
+      "bytes": 1590,
+      "sha256": "9922a2c3011f1b8de5d50b4621107b775c47b8200881cbc86fd44582105a419e"
+    },
+    {
+      "path": "GDINA-master/tests/testthat.R",
+      "bytes": 40,
+      "sha256": "8c591b7ac40933c004b5d467cb8e658c0833bc6887bf4a780b0a3beab0c6ac0f"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-GDINAextract.R",
+      "bytes": 4471,
+      "sha256": "22460c68123a1f870c471cd5271b41a1d1eedaff623eb53790ad5736373415a5"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-Qval.R",
+      "bytes": 1294,
+      "sha256": "c938f82c67e819c321260194c1b9834f3e8948575b10c8dfd038dcf9858a3646"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-basic.R",
+      "bytes": 726,
+      "sha256": "c3e176494aec06e2bf5360e7755687f642f81ec5b686ece9d084eeb995845419"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-design-sim.R",
+      "bytes": 2251,
+      "sha256": "1a15d2a6cb1c5ef6b37dbb16d57e78203e8e90c9fe4d2349b3eb25939908d5ff"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-helpers.R",
+      "bytes": 1947,
+      "sha256": "f946019c82008a2bf612c188b69535d52f10c81b97b196d4d707aeac9cef3b6c"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-input-validation.R",
+      "bytes": 4506,
+      "sha256": "eaf9010adc31dcfcaf777f8294d24c0f95a772770bd71ea808af2fbc038c4cde"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-itemfit.R",
+      "bytes": 635,
+      "sha256": "916395aa5b6f2886deea2909bcb4d39994e8528c7793b9766c367154787a94f7"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-likelihood.R",
+      "bytes": 8620,
+      "sha256": "b0bcccc051b233e648cf1b389658c1c71ac31f5ba62e029e5ee489047a87d73e"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-phase0-fixes.R",
+      "bytes": 8765,
+      "sha256": "45da78dc50c07dd442cabacbc0256ea43e982ab65419071f953d279494c1082d"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-scorefunctions.R",
+      "bytes": 7884,
+      "sha256": "79dd097f29fc20ab8e3885e3b645a42a54cf152bd3e6381b23955fe87575f8ed"
+    },
+    {
+      "path": "GDINA-master/tests/testthat/test-utils.R",
+      "bytes": 3257,
+      "sha256": "3ee4b8b92e14ab3da3ecf2020a69e678e94d33c0044e9ea7007739224c6fa3c6"
+    },
+    {
+      "path": "GDINA-master/vignettes/GDINA.Rmd",
+      "bytes": 4045,
+      "sha256": "931c63be4ec09bf65d63907424f2972597d72825126e0633b7228cdb8c97828e"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/CDMAnalysis_example.Rmd",
+      "bytes": 6187,
+      "sha256": "5187a37643c50a2a5ec0a7175ec3e119bfd36e739b8d9a1445ee2be27b03d8d1"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/GDINA_example.Rmd",
+      "bytes": 5657,
+      "sha256": "29998b093b119ab90ca2f41aa31c14ad1b08762d79c6b96a34253b9234b00771"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/HOGDINA_example.Rmd",
+      "bytes": 4995,
+      "sha256": "2478428c6205b29a6d1e0d66a955514bde41e1222b5639418ff66d07bfffd312"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/LCDM_example.Rmd",
+      "bytes": 2398,
+      "sha256": "855ee8f4da1a6867cae5c25fdbdfe453980171529ffcc9bab6daa7fd93cfbb5a"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/modelfit.Rmd",
+      "bytes": 3721,
+      "sha256": "fa23454f1e2e993f63e36002c59830388b7ea20d878091fa043dbe07be2c4d32"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/modelfit_cache/html/__packages",
+      "bytes": 6,
+      "sha256": "fca7aecee23926512fe2a091225949639b5dcb8fb24af6adb93e95e3fa6ece42"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/modelfit_cache/html/unnamed-chunk-6_cbce0e52c0d7f47594901c3d71fff931.RData",
+      "bytes": 3071,
+      "sha256": "1d70128f6a153c5d5ec658f576f1d74c09055cbf8a69b6cda7b0f5cd684c63cf"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/modelfit_cache/html/unnamed-chunk-6_cbce0e52c0d7f47594901c3d71fff931.rdb",
+      "bytes": 267087,
+      "sha256": "3e15394808eacab1eba9c013a48f7b13ad8f061f83671e020728686a92427c37"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/modelfit_cache/html/unnamed-chunk-6_cbce0e52c0d7f47594901c3d71fff931.rdx",
+      "bytes": 143,
+      "sha256": "0e3d63bbea20fd006125aba55aab1fbd69cbb684bc21e148298431534caf33db"
+    },
+    {
+      "path": "GDINA-master/vignettes/OnlineExercises/sGDINA_analysis_example.Rmd",
+      "bytes": 7503,
+      "sha256": "dbd91ec43884557937f49aaf28052d3809b46d423a67d19a2b3ad8192178422e"
+    }
+  ]
+}

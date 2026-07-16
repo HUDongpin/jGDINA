@@ -194,6 +194,33 @@ thresholds. `posteriorFloat64Bytes = N * 2^K * 8` measures one dense posterior
 matrix; actual peak memory is higher because likelihood and temporary buffers
 also exist.
 
+The four `local-*` runner cases use the exact response and Q matrices
+mechanically exported from the frozen `.rda` files into
+`benchmarks/data/local-cases.json`; they are not shape-matched synthetic
+substitutes. Reproduce that committed input byte-for-byte with:
+
+```sh
+Rscript benchmarks/generate-local-data.R
+node benchmarks/verify-local-data.mjs
+```
+
+Only the `browser-stress`, `node-stress`, preflight, and `smoke` cases use the
+seeded synthetic generator.
+
+The browser Worker moves numerical estimation off the UI thread, but normal
+nested matrices are still synchronously validated and packed before transfer,
+and JSON results are synchronously decoded and checked afterward. Record a
+Node.js proxy measurement for those exact JavaScript passes with:
+
+```sh
+npm run build
+node benchmarks/browser-boundary.mjs \
+  --case local-real-ecpe --posterior scores-only
+```
+
+This proxy has no pass/fail timing threshold and is not a substitute for
+measuring the real production browser on the lowest supported device.
+
 | Case | N | J | K | Classes | One posterior |
 |---|---:|---:|---:|---:|---:|
 | local-sim10gdina | 1,000 | 10 | 3 | 8 | 64,000 B |

@@ -32,6 +32,61 @@ if (installed_version != "2.12.3") {
   stop("Expected GDINA 2.12.3, found ", installed_version, call. = FALSE)
 }
 
+dependency_names <- function(description) {
+  fields <- unname(unlist(description[c("Depends", "Imports", "LinkingTo")]))
+  entries <- trimws(unlist(strsplit(paste(fields, collapse = ","), ",", fixed = TRUE)))
+  package_names <- trimws(sub("\\s*\\(.*$", "", entries))
+  sort(unique(setdiff(package_names[nzchar(package_names)], "R")))
+}
+
+installed_dependency_versions <- function(package_names) {
+  versions <- vapply(package_names, function(name) {
+    if (!requireNamespace(name, quietly = TRUE)) return(NA_character_)
+    as.character(utils::packageVersion(name))
+  }, character(1L))
+  if (anyNA(versions)) {
+    stop(
+      "The installed GDINA dependency graph is incomplete: ",
+      paste(names(versions)[is.na(versions)], collapse = ", "),
+      call. = FALSE
+    )
+  }
+  as.list(versions)
+}
+
+r_config <- function(variable) {
+  output <- suppressWarnings(system2(
+    file.path(R.home("bin"), "R"),
+    c("CMD", "config", variable),
+    stdout = TRUE,
+    stderr = TRUE
+  ))
+  status <- attr(output, "status")
+  if (is.null(status)) status <- 0L
+  list(
+    available = identical(as.integer(status), 0L),
+    value = paste(output, collapse = " "),
+    exit_status = as.integer(status)
+  )
+}
+
+configured_makevars <- Sys.getenv("R_MAKEVARS_USER", unset = "")
+makevars_metadata <- if (nzchar(configured_makevars) && file.exists(configured_makevars)) {
+  list(
+    configured = TRUE,
+    file_name = basename(configured_makevars),
+    md5 = unname(tools::md5sum(configured_makevars)),
+    content = paste(readLines(configured_makevars, warn = FALSE), collapse = "\n")
+  )
+} else {
+  list(configured = FALSE)
+}
+
+gdina_description <- utils::packageDescription("GDINA")
+dependency_versions <- installed_dependency_versions(
+  dependency_names(gdina_description)
+)
+
 evidence_directory <- file.path(root, "validation", "real-data", "evidence")
 reference_path <- file.path(evidence_directory, "r-reference.json")
 if (!file.exists(reference_path)) {
@@ -270,6 +325,7 @@ report <- list(
   package = list(
     name = "GDINA",
     version = installed_version,
+    built = unname(gdina_description$Built),
     library_source = "preinstalled library configured through JGDINA_R_LIB or R_LIBS_USER; absolute host path intentionally omitted",
     interface = "GDINA::GDINA(), GDINA::extract(), and GDINA::personparm()",
     estimator = "complete single-group R wrapper with control$Cpp=TRUE",
@@ -278,6 +334,22 @@ report <- list(
       "They are class-independent and therefore change only the reported likelihood by a known constant; all compared real-item estimates and person scores retain their original semantics.",
       "CI separately checks the exact C++ fast kernel without requiring the installed package."
     )
+  ),
+  environment = list(
+    r_version = R.version.string,
+    platform = R.version$platform,
+    operating_system = list(
+      system = unname(Sys.info()[["sysname"]]),
+      release = unname(Sys.info()[["release"]]),
+      machine = unname(Sys.info()[["machine"]])
+    ),
+    compiler = list(
+      cxx17 = r_config("CXX17"),
+      f77 = r_config("F77")
+    ),
+    external_software = as.list(extSoftVersion()),
+    dependency_versions = dependency_versions,
+    makevars_user = makevars_metadata
   ),
   reference = list(
     file = "validation/real-data/evidence/r-reference.json",

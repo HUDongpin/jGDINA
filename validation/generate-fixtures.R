@@ -586,7 +586,8 @@ benchmark_fixture <- function() {
     measurement = list(
       warmup_fits = 1L,
       measured_fits = 5L,
-      report = c("medianWallMilliseconds", "p95WallMilliseconds", "peakResidentBytes", "iterations", "finalLogLikelihood"),
+      report = c("medianWallMilliseconds", "p95WallMilliseconds", "peakResidentBytes", "iterations",
+                 "converged", "convergenceReason", "finalChange", "finalLogLikelihood"),
       correctness_gate = "Run the matching golden-fixture suite before accepting benchmark numbers."
     ),
     cases = cases

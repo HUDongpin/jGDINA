@@ -23,7 +23,7 @@ system when work must survive a restart, deployment, request disconnect, or
 retry. Prefer `posteriorStorage: "scores-only"` for production requests and
 close the pool only during controlled shutdown or test teardown.
 
-License: GPL-3.0-only. Provenance is in `UPSTREAM.md`.
-
-Source-repository guides: [Next.js/Node production operations](../../docs/nextjs-production.md)
-and [resource-limit API](../../docs/api-reference.md#resource-limits).
+License: GPL-3.0-only; see [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+Compatibility provenance is in [UPSTREAM.md](./UPSTREAM.md). The preferred
+TypeScript source and exact package-local rebuild procedure are in
+[SOURCE.md](./SOURCE.md).

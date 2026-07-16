@@ -19,21 +19,53 @@ npm run dev
 The example's `.npmrc` enables npm `install-links`, so local `file:` packages
 are packed and installed like registry packages instead of being workspace
 symlinks. This exercises the same adjacent worker assets and Next 16 Turbopack
-externalization that a published install uses.
+externalization that a published install uses. It is not, however, an install
+from the fixed release `.tgz` files; the release-bundle smoke covers that
+separate boundary.
 
 The API route explicitly exports `runtime = "nodejs"`; the Node adapter is not
 compatible with the Next.js Edge runtime.
 
-## What to verify
+## Repeatable production smoke
 
-After starting the example:
+From the repository root, install the Playwright CLI browser once, then run the
+fresh-build acceptance command:
 
-- open `/api-fit` and run the server-worker fit;
-- open `/client` and run the browser-worker fit;
-- confirm both results report convergence and the expected `backendId`;
-- cancel a running client fit and confirm the UI remains responsive; and
-- run `npm run build` to verify the adjacent Node/browser worker assets survive
-  the production bundle.
+```sh
+npm run smoke:next-production:install-browser
+npm run accept:next-production
+```
+
+If a local Google Chrome installation should be used instead of downloading
+Chromium, omit the install command and run:
+
+```sh
+PLAYWRIGHT_CLI_BROWSER=chrome npm run accept:next-production
+```
+
+The smoke starts `next start` on an available loopback port and uses the
+Playwright CLI against the actual production server. It verifies:
+
+- the home page and both fit paths;
+- a converged `node-worker:js` result through `/api/jgdina`;
+- structured `400`, `415`, and `422` API errors without stack disclosure;
+- a converged `browser-worker:js` result and a successful hashed Turbopack
+  Worker response;
+- cancellation during a deliberately long Worker estimation followed by a
+  successful recovery fit;
+- no unexpected console errors, page errors, or failed requests during the
+  successful UI flows; and
+- the hashed browser worker asset and Node worker entry in the production build
+  and route trace.
+
+Machine-local snapshots, request logs, a screenshot, server logs, and
+`report.json` are written under `output/playwright/next-production-smoke/`.
+That directory is intentionally gitignored.
+
+The cancellation guarantee applies while CPU-heavy numerical estimation is in
+the Web Worker. Input validation/copying and transport packing happen
+synchronously before Worker execution, and result parsing/assertion happen on
+the main thread afterward; a click cannot interrupt those synchronous phases.
 
 The example is a runtime integration demonstration, not a production service.
 It has no authentication, tenancy, quota, persistence, durable queue, or

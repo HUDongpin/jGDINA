@@ -9,7 +9,11 @@
   "sideEffects": false,
   "files": [
     "dist",
+    "src",
     "README.md",
+    "SOURCE.md",
+    "tsconfig.json",
+    "tsconfig.source.json",
     "LICENSE",
     "NOTICE",
     "UPSTREAM.md"
@@ -26,10 +30,15 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "build:source": "npm run build",
     "clean": "rm -rf dist",
     "prepack": "node ../../scripts/package-license.mjs prepare .",
     "postpack": "node ../../scripts/package-license.mjs clean .",
     "test": "vitest run --config ../../vitest.config.ts packages/core/test",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "tsc --noEmit -p tsconfig.workspace.json"
+  },
+  "devDependencies": {
+    "tsup": "8.5.1",
+    "typescript": "5.9.3"
   }
 }

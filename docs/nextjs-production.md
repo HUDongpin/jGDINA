@@ -250,8 +250,17 @@ iterations were reached.
 ## Browser/static deployment controls
 
 Import only `@jgdina/next/client` from a client component. Each fit creates a
-module Worker and keeps estimation off React's main thread. Verify that the
-deployment emits and serves the worker asset with the correct module MIME type.
+module Worker and keeps the CPU-heavy numerical estimation off React's main
+thread. Verify that the deployment emits and serves the worker asset with the
+correct module MIME type.
+
+The ordinary nested-matrix API still validates the input and packs transferable
+typed arrays synchronously before the Worker starts. After it finishes, the
+main thread decodes and validates the JSON result. Cancellation is prompt while
+the Worker is active, but cannot interrupt those synchronous pre/post passes.
+Benchmark this boundary on the lowest-memory supported device, prefer
+`posteriorStorage: "scores-only"`, and avoid starting a large fit directly
+inside latency-sensitive interaction work.
 
 For a Content Security Policy, permit the actual Worker source with
 `worker-src`; a custom `workerFactory` can support an application-specific
@@ -266,7 +275,7 @@ results stay local and test on the lowest-memory supported devices.
 
 Before deployment, verify in the actual provider environment:
 
-- Node.js 20 or newer and Next.js 15 or 16;
+- Node.js 20.9 or newer and Next.js 16;
 - Node runtime, not Edge;
 - `@jgdina/node` remains external and `worker-entry.js` is present in the
   deployed artifact;

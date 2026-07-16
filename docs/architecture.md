@@ -49,16 +49,24 @@ boundary and transfer their `ArrayBuffer`s rather than cloning them.
 
 ## Execution model
 
-The direct engine is synchronous and supports a cooperative abort predicate.
-The browser and Node APIs are asynchronous:
+The direct engine performs numerical work synchronously and supports a
+cooperative abort predicate. The browser and Node APIs are asynchronous:
 
 - progress is emitted after initialization and EM iterations;
 - cancellation terminates the active worker, guaranteeing prompt cancellation
   even while a CPU-bound iteration is running; and
 - a cancelled pooled Node worker is replaced before another job is accepted.
 
-Browser fitting must not run on React's main thread. Server fitting must not
-run on Node's request/event-loop thread.
+The worker boundary applies to the CPU-heavy numerical fit. For the normal
+matrix API, input validation and typed-array packing happen synchronously on
+the caller thread before the worker starts; result decoding and JSON-safety
+validation happen there after it returns. An abort can terminate the active
+worker promptly, but it cannot preempt one of those synchronous pre/post
+passes. Browser applications must therefore benchmark validation, transfer,
+and result size as well as EM, especially for full posterior output.
+
+CPU-bound browser estimation must not run on React's main thread. CPU-bound
+server estimation must not run on Node's request/event-loop thread.
 
 ## Complexity and limits
 

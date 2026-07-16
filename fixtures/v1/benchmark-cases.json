@@ -5,7 +5,7 @@
   "measurement": {
     "warmup_fits": 1,
     "measured_fits": 5,
-    "report": ["medianWallMilliseconds", "p95WallMilliseconds", "peakResidentBytes", "iterations", "finalLogLikelihood"],
+    "report": ["medianWallMilliseconds", "p95WallMilliseconds", "peakResidentBytes", "iterations", "converged", "convergenceReason", "finalChange", "finalLogLikelihood"],
     "correctness_gate": "Run the matching golden-fixture suite before accepting benchmark numbers."
   },
   "cases": [

@@ -20,7 +20,7 @@ terminates the fit Worker; it does not create a resumable checkpoint. Verify
 the emitted module Worker, CSP `worker-src`, memory, and cancellation on every
 supported browser/device class.
 
-License: GPL-3.0-only. Provenance is in `UPSTREAM.md`.
-
-Source-repository guides: [browser/static deployment controls](../../docs/nextjs-production.md#browserstatic-deployment-controls)
-and [full API reference](../../docs/api-reference.md).
+License: GPL-3.0-only; see [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+Compatibility provenance is in [UPSTREAM.md](./UPSTREAM.md). The preferred
+TypeScript source and exact package-local rebuild procedure are in
+[SOURCE.md](./SOURCE.md).

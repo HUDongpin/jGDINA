@@ -6,14 +6,67 @@
   "package": {
     "name": "GDINA",
     "version": "2.12.3",
+    "built": "R 4.4.1; aarch64-apple-darwin20; 2026-07-16 13:44:57 UTC; unix",
     "library_source": "preinstalled library configured through JGDINA_R_LIB or R_LIBS_USER; absolute host path intentionally omitted",
     "interface": "GDINA::GDINA(), GDINA::extract(), and GDINA::personparm()",
     "estimator": "complete single-group R wrapper with control$Cpp=TRUE",
     "rationale": "Deterministic fixed-P=.5 row-tag items preserve duplicate-row frequencies through the wrapper's unconditional aggregation. They are class-independent and therefore change only the reported likelihood by a known constant; all compared real-item estimates and person scores retain their original semantics. CI separately checks the exact C++ fast kernel without requiring the installed package."
   },
+  "environment": {
+    "r_version": "R version 4.4.1 (2024-06-14)",
+    "platform": "aarch64-apple-darwin20",
+    "operating_system": {
+      "system": "Darwin",
+      "release": "25.3.0",
+      "machine": "arm64"
+    },
+    "compiler": {
+      "cxx17": {
+        "available": true,
+        "value": "clang++ -arch arm64",
+        "exit_status": 0
+      },
+      "f77": {
+        "available": false,
+        "value": "ERROR: no information for variable 'F77'",
+        "exit_status": 1
+      }
+    },
+    "external_software": {
+      "zlib": "1.2.12",
+      "bzlib": "1.0.8, 13-Jul-2019",
+      "xz": "5.4.4",
+      "libdeflate": "",
+      "PCRE": "10.42 2022-12-11",
+      "ICU": "76.1",
+      "TRE": "TRE 0.8.0 R_fixes (BSD)",
+      "iconv": "Apple or GNU libiconv 1.11",
+      "readline": "5.2",
+      "BLAS": "/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib"
+    },
+    "dependency_versions": {
+      "alabama": "2025.1.0",
+      "foreach": "1.5.2",
+      "ggplot2": "3.5.1",
+      "graphics": "4.4.1",
+      "MASS": "7.3.60.2",
+      "nloptr": "2.2.1",
+      "numDeriv": "2016.8.1.1",
+      "Rcpp": "1.0.13.1",
+      "RcppArmadillo": "14.0.2.1",
+      "Rsolnp": "2.0.1",
+      "shiny": "1.9.1",
+      "shinydashboard": "0.7.3",
+      "stats": "4.4.1",
+      "utils": "4.4.1"
+    },
+    "makevars_user": {
+      "configured": false
+    }
+  },
   "reference": {
     "file": "validation/real-data/evidence/r-reference.json",
-    "md5": "85d01c497a4fa6d8ea24f9b92215e5b6"
+    "md5": "b6b5da29f9559003076527a01ccbaf28"
   },
   "tolerances": {
     "item_probability_absolute": 1e-08,

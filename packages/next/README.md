@@ -7,7 +7,7 @@ The root entry point is server-only and uses `@jgdina/node`. The
 `@jgdina/next/client` entry point is browser-only and re-exports
 `@jgdina/browser`; neither entry point imports `next` at runtime.
 
-Next.js 15 and 16 are supported. Keep the Node worker package external so its
+Next.js 16 is the tested and supported RC target. Keep the Node worker package external so its
 compiled worker entry remains adjacent to the adapter at runtime:
 
 ```js
@@ -114,8 +114,12 @@ export default function ClientPage() {
 }
 ```
 
-Each browser fit runs in a dedicated Web Worker, keeping the React UI thread
-responsive. The complete runnable layout is in `examples/next-app`.
+Each browser fit runs CPU-heavy numerical estimation in a dedicated Web Worker.
+Input validation/copying and transport packing still run synchronously on the
+main thread before the Worker starts, and result parsing/assertion run there
+after it finishes. Worker-phase cancellation is prompt because it terminates
+the active Worker; it cannot interrupt those synchronous pre/post phases. The
+complete runnable layout is in `examples/next-app`.
 
 ## Production boundary
 
@@ -130,7 +134,8 @@ verify worker packaging and cancellation in the target provider. Move fits to
 an application-owned durable job system when they can approach a request
 deadline or must survive a disconnect/restart.
 
-The source repository's [production guide](../../docs/nextjs-production.md)
-covers limits, timeouts, durable-queue boundaries, observability, provider
-constraints, security responsibilities, and release checks. See the
-[API reference](../../docs/api-reference.md) for request/result fields.
+The complete local jGDINA workspace contains the production and API guides.
+This archive includes the preferred TypeScript source and exact package-local
+rebuild procedure in [SOURCE.md](./SOURCE.md), compatibility provenance in
+[UPSTREAM.md](./UPSTREAM.md), and the [GPL-3.0-only license](./LICENSE) with
+[NOTICE](./NOTICE).
