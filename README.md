@@ -20,6 +20,7 @@ See [UPSTREAM.md](./UPSTREAM.md) for the frozen scope and provenance.
 | [Architecture](./docs/architecture.md) | Package boundaries, typed arrays, execution, stability, and memory design |
 | [Numerical validation](./validation/README.md) | Independent oracle, fixtures, equations, tolerances, and benchmark cases |
 | [Real-data acceptance report](./validation/real-data/report/report.html) | RC decision, ECPE/Tatsuoka evidence, exact differences, and remaining validation gaps |
+| [Private user-data acceptance](./validation/user-data/README.md) | Local de-identified case preflight, frozen R parity, privacy rules, and aggregate reports |
 
 ## v1 scope
 
@@ -237,6 +238,7 @@ scores, posterior, and serialization costs.
 npm ci
 npm run verify
 npm run accept:real-data
+npm run test:user-data
 npm run benchmark -- --case smoke
 Rscript validation/compare-fast-kernel.R
 npm run release:bundle -- 1.0.0-rc.1
@@ -261,6 +263,12 @@ tolerances are in [validation/README.md](./validation/README.md). The real-data
 gate covers ECPE GDINA/DINO, Tatsuoka DINA, and deterministic ECPE missingness;
 the generated [acceptance report](./validation/real-data/report/report.html)
 records the exact case-level evidence and optional full-package wrapper audit.
+For a new instrument, the local
+[private user-data workflow](./validation/user-data/README.md) accepts only a
+de-identified case stored outside this workspace, forces score-only processing,
+and writes aggregate technical-parity evidence. It does not use GitHub or send
+the case over a network, and it does not replace full-package diagnostics or
+psychometric review.
 
 ## Statistical responsibility
 

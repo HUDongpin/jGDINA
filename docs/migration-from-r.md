@@ -224,6 +224,29 @@ described in [validation/README.md](../validation/README.md). They validate the
 engine implementation; they do not validate a new instrument's Q-matrix or
 substantive interpretation.
 
+For a de-identified instrument case, use the repository's private local gate:
+
+```sh
+npm run accept:user-data -- \
+  --case "$HOME/jgdina-private/case.json" \
+  --oracle kernel \
+  --preflight
+
+npm run accept:user-data -- \
+  --case "$HOME/jgdina-private/case.json" \
+  --out "$HOME/jgdina-private/result-001" \
+  --oracle kernel
+```
+
+The input and the new output path must remain outside the workspace. The
+POSIX-only gate requires current-user-owned paths without extended ACLs and an
+input mode of `0400` or `0600`. It forces `scores-only`, uses one shared
+explicit or canonical start, and persists only aggregate evidence. See the
+[private user-data acceptance guide](../validation/user-data/README.md) for the
+schema, exit codes, and privacy boundary. A `PASS` is exact technical parity
+against the frozen kernel and independent scoring equations, not a complete
+`GDINA()` wrapper or instrument-validity decision.
+
 ## 7. Keep an R analysis path for missing diagnostics
 
 jGDINA v1 provides estimation and classifications, not the complete R

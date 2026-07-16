@@ -1,0 +1,395 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jgdina.local/schema/user-data-case-v1.json",
+  "title": "Private jGDINA user-data acceptance case",
+  "description": "De-identified, data-only input for the local jGDINA acceptance workflow. Cross-matrix dimensions and statistical constraints are checked by the CLI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "caseId",
+    "privacy",
+    "fitInput"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schemaVersion": {
+      "const": "jgdina-user-case/1"
+    },
+    "caseId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"
+    },
+    "privacy": {
+      "$ref": "#/$defs/privacyAcknowledgement"
+    },
+    "fitInput": {
+      "$ref": "#/$defs/fitInput"
+    },
+    "itemIds": {
+      "$ref": "#/$defs/deidentifiedIds"
+    },
+    "attributeIds": {
+      "$ref": "#/$defs/deidentifiedIds"
+    },
+    "acceptance": {
+      "$ref": "#/$defs/acceptance"
+    }
+  },
+  "$defs": {
+    "privacyAcknowledgement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "directIdentifiersRemoved",
+        "respondentIdsExcluded",
+        "freeTextExcluded"
+      ],
+      "properties": {
+        "directIdentifiersRemoved": {
+          "const": true
+        },
+        "respondentIdsExcluded": {
+          "const": true
+        },
+        "freeTextExcluded": {
+          "const": true
+        }
+      }
+    },
+    "deidentifiedIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80,
+        "pattern": "^[^\\r\\n\\t]+$"
+      }
+    },
+    "responseValue": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "responseRow": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/responseValue"
+      }
+    },
+    "qRow": {
+      "type": "array",
+      "minItems": 1,
+      "contains": {
+        "const": 1
+      },
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "itemModel": {
+      "type": "string",
+      "enum": [
+        "GDINA",
+        "DINA",
+        "DINO"
+      ]
+    },
+    "probabilityVector": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "itemProbabilityMatrix": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/probabilityVector"
+      }
+    },
+    "prior": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "const": "saturated"
+            },
+            "initialProbabilities": {
+              "$ref": "#/$defs/probabilityVector"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "probabilities"
+          ],
+          "properties": {
+            "type": {
+              "const": "fixed"
+            },
+            "probabilities": {
+              "$ref": "#/$defs/probabilityVector"
+            }
+          }
+        }
+      ]
+    },
+    "initialization": {
+      "type": "object",
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "not": {
+            "required": [
+              "initialItemProbabilities",
+              "initialItemProbabilityCandidates"
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "strategy": {
+          "const": "deterministic"
+        },
+        "starts": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "initialItemProbabilities": {
+          "$ref": "#/$defs/itemProbabilityMatrix"
+        },
+        "initialItemProbabilityCandidates": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "$ref": "#/$defs/itemProbabilityMatrix"
+          }
+        }
+      }
+    },
+    "resourceLimits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxRespondents": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "maxItems": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "maxAttributes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "maxLatentClasses": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1048576
+        },
+        "maxEstimatedBytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 536870912
+        },
+        "maxStarts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        },
+        "maxIterations": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        }
+      }
+    },
+    "estimation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxIterations": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "convergenceTolerance": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "probabilityBounds": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 1
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 1
+            }
+          ],
+          "items": false
+        },
+        "smallSampleCorrection": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          ],
+          "items": false
+        },
+        "initialization": {
+          "$ref": "#/$defs/initialization"
+        },
+        "aggregateRows": {
+          "type": "boolean"
+        },
+        "posteriorStorage": {
+          "const": "scores-only"
+        },
+        "blockSize": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "resourceLimits": {
+          "$ref": "#/$defs/resourceLimits"
+        }
+      }
+    },
+    "fitInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "responses",
+        "qMatrix"
+      ],
+      "properties": {
+        "responses": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/responseRow"
+          }
+        },
+        "qMatrix": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/qRow"
+          }
+        },
+        "model": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/itemModel"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/itemModel"
+              }
+            }
+          ]
+        },
+        "prior": {
+          "$ref": "#/$defs/prior"
+        },
+        "estimation": {
+          "$ref": "#/$defs/estimation"
+        }
+      }
+    },
+    "tolerances": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "probabilityAbsolute": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1e-8
+        },
+        "probabilityRelative": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1e-12
+        },
+        "logLikelihoodAbsolute": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1e-7
+        },
+        "logLikelihoodRelative": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1e-12
+        },
+        "classificationAgreement": {
+          "const": 1
+        }
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tolerances": {
+          "$ref": "#/$defs/tolerances"
+        }
+      }
+    }
+  }
+}

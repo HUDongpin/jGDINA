@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "jgdina-user-case/1",
+  "caseId": "synthetic-mixed-model-example",
+  "privacy": {
+    "directIdentifiersRemoved": true,
+    "respondentIdsExcluded": true,
+    "freeTextExcluded": true
+  },
+  "itemIds": [
+    "item-01",
+    "item-02",
+    "item-03",
+    "item-04"
+  ],
+  "attributeIds": [
+    "attribute-01",
+    "attribute-02"
+  ],
+  "fitInput": {
+    "responses": [
+      [0, 0, 0, 0],
+      [0, 0, 0, 1],
+      [0, 0, 1, 0],
+      [0, 0, 1, 1],
+      [0, 1, 0, 0],
+      [0, 1, 0, 1],
+      [0, 1, 1, 0],
+      [0, 1, 1, 1],
+      [1, 0, 0, 0],
+      [1, 0, 0, 1],
+      [1, 0, 1, 0],
+      [1, 0, 1, 1],
+      [1, 1, 0, 0],
+      [1, 1, 0, 1],
+      [1, 1, 1, 0],
+      [1, 1, 1, 1],
+      [0, 0, 0, 0],
+      [0, 1, 0, 0],
+      [1, 0, 0, 1],
+      [1, 1, 1, 1],
+      [0, 0, 1, 0],
+      [0, 1, 1, 1],
+      [1, 0, 1, 1],
+      [1, 1, 1, 0],
+      [0, 0, null, 0],
+      [0, 1, 0, null],
+      [1, 0, 1, null],
+      [1, 1, null, 1],
+      [0, 0, 0, 1],
+      [0, 1, 0, 1],
+      [1, 0, 1, 0],
+      [1, 1, 1, 1]
+    ],
+    "qMatrix": [
+      [1, 0],
+      [0, 1],
+      [1, 1],
+      [1, 1]
+    ],
+    "model": [
+      "GDINA",
+      "DINA",
+      "DINO",
+      "GDINA"
+    ],
+    "prior": {
+      "type": "saturated",
+      "initialProbabilities": [0.25, 0.25, 0.25, 0.25]
+    },
+    "estimation": {
+      "maxIterations": 5000,
+      "convergenceTolerance": 1e-8,
+      "probabilityBounds": [0.0001, 0.9999],
+      "smallSampleCorrection": [0.0005, 0.001],
+      "aggregateRows": false,
+      "posteriorStorage": "scores-only",
+      "initialization": {
+        "strategy": "deterministic",
+        "starts": 1,
+        "seed": 123456,
+        "initialItemProbabilities": [
+          [0.2, 0.8],
+          [0.2, 0.8],
+          [0.2, 0.8],
+          [0.2, 0.4, 0.6, 0.8]
+        ]
+      }
+    }
+  },
+  "acceptance": {
+    "tolerances": {
+      "probabilityAbsolute": 1e-8,
+      "probabilityRelative": 1e-12,
+      "logLikelihoodAbsolute": 1e-7,
+      "logLikelihoodRelative": 1e-12,
+      "classificationAgreement": 1
+    }
+  }
+}

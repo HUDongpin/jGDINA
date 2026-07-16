@@ -10,3 +10,6 @@ coverage/
 .release/
 *.tgz
 output/playwright/
+# Defense in depth: the CLI rejects private cases/results inside the workspace.
+validation/user-data/private/
+validation/user-data/output/
