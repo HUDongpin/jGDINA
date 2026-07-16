@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "benchmark-case-definitions",
+  "purpose": "Stable workload definitions; no timing threshold is encoded because hardware and runtime differ.",
+  "measurement": {
+    "warmup_fits": 1,
+    "measured_fits": 5,
+    "report": ["medianWallMilliseconds", "p95WallMilliseconds", "peakResidentBytes", "iterations", "finalLogLikelihood"],
+    "correctness_gate": "Run the matching golden-fixture suite before accepting benchmark numbers."
+  },
+  "cases": [
+    {
+      "id": "local-sim10gdina",
+      "source": "GDINA-master/data/sim10GDINA.rda",
+      "n": 1000,
+      "j": 10,
+      "k": 3,
+      "class_count": 8,
+      "posterior_float64_bytes": 64000,
+      "e_step_bernoulli_terms": 80000
+    },
+    {
+      "id": "local-sim30gdina",
+      "source": "GDINA-master/data/sim30GDINA.rda",
+      "n": 1000,
+      "j": 30,
+      "k": 5,
+      "class_count": 32,
+      "posterior_float64_bytes": 256000,
+      "e_step_bernoulli_terms": 960000
+    },
+    {
+      "id": "local-real-ecpe",
+      "source": "GDINA-master/data/realdata_ECPE.rda",
+      "n": 2922,
+      "j": 28,
+      "k": 3,
+      "class_count": 8,
+      "posterior_float64_bytes": 187008,
+      "e_step_bernoulli_terms": 654528
+    },
+    {
+      "id": "local-real-tatsuoka",
+      "source": "GDINA-master/data/realdata_Tatsuoka1990.rda",
+      "n": 536,
+      "j": 20,
+      "k": 8,
+      "class_count": 256,
+      "posterior_float64_bytes": 1097728,
+      "e_step_bernoulli_terms": 2744320
+    },
+    {
+      "id": "browser-stress",
+      "source": "synthetic-definition",
+      "n": 3000,
+      "j": 30,
+      "k": 10,
+      "class_count": 1024,
+      "posterior_float64_bytes": 24576000,
+      "e_step_bernoulli_terms": 92160000
+    },
+    {
+      "id": "node-stress",
+      "source": "synthetic-definition",
+      "n": 10000,
+      "j": 50,
+      "k": 12,
+      "class_count": 4096,
+      "posterior_float64_bytes": 327680000,
+      "e_step_bernoulli_terms": 2048000000
+    },
+    {
+      "id": "browser-memory-preflight-k15",
+      "source": "synthetic-definition",
+      "n": 3000,
+      "j": 30,
+      "k": 15,
+      "execution": "preflight-only",
+      "expected": "reject-dense-fit-or-use-blockwise-posterior",
+      "class_count": 32768,
+      "posterior_float64_bytes": 786432000,
+      "e_step_bernoulli_terms": 2949120000
+    }
+  ]
+}

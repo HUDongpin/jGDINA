@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+# Preserve the downloaded upstream snapshot byte-for-byte, including its mixed
+# historical line endings used by the validation provenance hashes.
+GDINA-master/** -text
+
+*.rda binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.woff2 binary

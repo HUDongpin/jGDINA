@@ -1,0 +1,40 @@
+{
+  "name": "jgdina-workspace",
+  "version": "1.0.0-rc.1",
+  "private": true,
+  "description": "A standalone TypeScript implementation of single-group binary GDINA models.",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "accept:full-package": "Rscript validation/real-data/compare-full-package.R",
+    "accept:real-data": "npm run build && Rscript validation/real-data/generate-reference.R && node validation/real-data/compare.mjs",
+    "build": "npm run build --workspaces --if-present",
+    "benchmark": "npm run build && node benchmarks/run.mjs",
+    "ci:node": "npm run typecheck && npm test && npm run build && npm run verify:runtime",
+    "clean": "npm run clean --workspaces --if-present",
+    "oracle": "Rscript validation/validate-fixtures.R",
+    "oracle:generate": "Rscript validation/generate-fixtures.R",
+    "release:check": "node scripts/release/dry-run.mjs",
+    "release:pack-smoke": "node scripts/release/dry-run.mjs --skip-git",
+    "test": "npm run test --workspaces --if-present",
+    "test:watch": "vitest",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "verify:runtime": "node validation/runtime-smoke.mjs",
+    "verify": "npm run ci:node && npm run oracle"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  },
+  "overrides": {
+    "esbuild": "0.28.1"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2022"
+    ],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "paths": {
+      "@jgdina/core": [
+        "packages/core/src/index.ts"
+      ],
+      "@jgdina/kernels-js": [
+        "packages/kernels-js/src/index.ts"
+      ],
+      "@jgdina/worker-protocol": [
+        "packages/worker-protocol/src/index.ts"
+      ],
+      "@jgdina/browser": [
+        "packages/browser/src/index.ts"
+      ],
+      "@jgdina/node": [
+        "packages/node/src/index.ts"
+      ],
+      "@jgdina/next": [
+        "packages/next/src/index.ts"
+      ],
+      "jgdina": [
+        "packages/jgdina/src/index.ts"
+      ]
+    },
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "useUnknownInCatchVariables": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "skipLibCheck": true
+  }
+}

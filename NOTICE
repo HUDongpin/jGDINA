@@ -1,0 +1,17 @@
+jGDINA
+======
+
+Copyright (C) 2026 jGDINA contributors.
+
+This project is a TypeScript implementation derived from and validated against
+GDINA 2.12.3 by Wenchao Ma, Jimmy de la Torre, and contributors. The upstream
+project is available at https://github.com/Wenchao-Ma/GDINA and declares the
+GNU General Public License version 3.
+
+jGDINA is distributed under the GNU General Public License version 3 only.
+See LICENSE for the complete license terms and UPSTREAM.md for the exact
+upstream version, compatibility boundary, and provenance.
+
+This software is provided without warranty. It is statistical software; users
+remain responsible for reviewing model assumptions, convergence, diagnostics,
+and substantive interpretation.

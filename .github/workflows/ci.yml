@@ -1,0 +1,183 @@
+name: CI
+
+"on":
+  push:
+    branches:
+      - "**"
+    tags-ignore:
+      - "**"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+
+jobs:
+  node-matrix:
+    name: Node ${{ matrix.node }} · type, unit, build, runtime
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - 20
+          - 22
+          - 24
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Use Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+          package-manager-cache: false
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Type-check all packages
+        run: npm run typecheck
+      - name: Run unit and oracle-parity tests
+        run: npm test
+      - name: Build all packages
+        run: npm run build
+      - name: Exercise direct, ESM, CommonJS, isolated, and pooled runtimes
+        run: npm run verify:runtime
+
+  r-oracle:
+    name: Independent R oracle
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+          use-public-rspm: true
+      - name: Install independent oracle dependency
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: any::jsonlite
+          install-pandoc: false
+          install-quarto: false
+      - name: Reproduce and validate committed fixtures
+        run: Rscript validation/validate-fixtures.R
+
+  real-data-acceptance:
+    name: Real-data R ↔ jGDINA acceptance
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          package-manager-cache: false
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+          use-public-rspm: true
+      - name: Install R kernel and serialization dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::jsonlite
+            any::Rcpp
+            any::RcppArmadillo
+          install-pandoc: false
+          install-quarto: false
+      - name: Install locked Node dependencies
+        run: npm ci
+      - name: Recompile the frozen kernel and compare real datasets
+        run: npm run accept:real-data
+
+  next-production:
+    name: Next.js 16 production build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            examples/next-app/package-lock.json
+          package-manager-cache: false
+      - name: Install locked jGDINA dependencies
+        run: npm ci
+      - name: Build jGDINA packages
+        run: npm run build
+      - name: Install locked Next.js example dependencies
+        run: npm ci --prefix examples/next-app
+      - name: Type-check Next.js example
+        run: npm run typecheck --prefix examples/next-app
+      - name: Create Next.js production build
+        run: npm run build --prefix examples/next-app
+
+  dependency-audit:
+    name: npm dependency audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            examples/next-app/package-lock.json
+          package-manager-cache: false
+      - name: Audit root lock
+        run: npm audit --audit-level=low
+      - name: Audit Next.js example lock
+        run: npm audit --prefix examples/next-app --audit-level=low
+
+  package-dry-run:
+    name: npm pack and clean-install smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          package-manager-cache: false
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Validate release metadata, pack all packages, and install tarballs
+        run: npm run release:pack-smoke

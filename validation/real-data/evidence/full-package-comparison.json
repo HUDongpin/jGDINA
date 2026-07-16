@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0.0",
+  "generated_by": "validation/real-data/compare-full-package.R",
+  "deterministic": true,
+  "passed": true,
+  "package": {
+    "name": "GDINA",
+    "version": "2.12.3",
+    "library_source": "preinstalled library configured through JGDINA_R_LIB or R_LIBS_USER; absolute host path intentionally omitted",
+    "interface": "GDINA::GDINA(), GDINA::extract(), and GDINA::personparm()",
+    "estimator": "complete single-group R wrapper with control$Cpp=TRUE",
+    "rationale": "Deterministic fixed-P=.5 row-tag items preserve duplicate-row frequencies through the wrapper's unconditional aggregation. They are class-independent and therefore change only the reported likelihood by a known constant; all compared real-item estimates and person scores retain their original semantics. CI separately checks the exact C++ fast kernel without requiring the installed package."
+  },
+  "reference": {
+    "file": "validation/real-data/evidence/r-reference.json",
+    "md5": "85d01c497a4fa6d8ea24f9b92215e5b6"
+  },
+  "tolerances": {
+    "item_probability_absolute": 1e-08,
+    "prior_probability_absolute": 1e-08,
+    "log_likelihood_absolute": 9.9999999999999995e-08,
+    "eap_probability_absolute": 1e-08,
+    "iterations": "exact",
+    "discrete_classifications": "exact"
+  },
+  "cases": [
+    {
+      "id": "ecpe-gdina",
+      "dataset": "ECPE",
+      "derivation": "original",
+      "model": "GDINA",
+      "passed": true,
+      "dimensions": {
+        "respondents": 2922,
+        "items": 28,
+        "attributes": 3,
+        "latent_classes": 8,
+        "missing_responses": 0
+      },
+      "reference": {
+        "iterations": 1639,
+        "log_likelihood": -42738.560478435807
+      },
+      "full_package": {
+        "iterations": 1639,
+        "log_likelihood": -42738.560478435749,
+        "raw_log_likelihood_with_neutral_row_tags": -67043.07321758967,
+        "neutral_row_tag_log_likelihood_constant": -24304.512739153921,
+        "neutral_row_tag_items": 12,
+        "neutral_row_tags_preserved_all_rows": true,
+        "max_absolute_neutral_item_probability_difference": 0,
+        "warnings": []
+      },
+      "differences": {
+        "max_absolute_item_probability": 2.6645352591003757e-15,
+        "max_absolute_prior_probability": 8.3266726846886741e-16,
+        "absolute_log_likelihood": 5.8207660913467407e-11,
+        "max_absolute_eap_probability": 1.1324274851176597e-14
+      },
+      "agreements": {
+        "iterations_exact": true,
+        "attribute_pattern_order_exact": true,
+        "direct_map_class_fraction": 1,
+        "direct_mle_class_fraction": 1,
+        "personparm_map_strict_fraction": 1,
+        "personparm_mle_strict_fraction": 1,
+        "personparm_map_tie_compatible_fraction": 1,
+        "personparm_mle_tie_compatible_fraction": 1,
+        "personparm_eap_classification_fraction": 1
+      }
+    },
+    {
+      "id": "ecpe-dino",
+      "dataset": "ECPE",
+      "derivation": "original",
+      "model": "DINO",
+      "passed": true,
+      "dimensions": {
+        "respondents": 2922,
+        "items": 28,
+        "attributes": 3,
+        "latent_classes": 8,
+        "missing_responses": 0
+      },
+      "reference": {
+        "iterations": 653,
+        "log_likelihood": -42920.372737434642
+      },
+      "full_package": {
+        "iterations": 653,
+        "log_likelihood": -42920.372737434584,
+        "raw_log_likelihood_with_neutral_row_tags": -67224.885476588504,
+        "neutral_row_tag_log_likelihood_constant": -24304.512739153921,
+        "neutral_row_tag_items": 12,
+        "neutral_row_tags_preserved_all_rows": true,
+        "max_absolute_neutral_item_probability_difference": 0,
+        "warnings": []
+      },
+      "differences": {
+        "max_absolute_item_probability": 1.1102230246251565e-15,
+        "max_absolute_prior_probability": 1.27675647831893e-15,
+        "absolute_log_likelihood": 5.8207660913467407e-11,
+        "max_absolute_eap_probability": 8.659739592076221e-15
+      },
+      "agreements": {
+        "iterations_exact": true,
+        "attribute_pattern_order_exact": true,
+        "direct_map_class_fraction": 1,
+        "direct_mle_class_fraction": 1,
+        "personparm_map_strict_fraction": 1,
+        "personparm_mle_strict_fraction": 1,
+        "personparm_map_tie_compatible_fraction": 1,
+        "personparm_mle_tie_compatible_fraction": 1,
+        "personparm_eap_classification_fraction": 1
+      }
+    },
+    {
+      "id": "tatsuoka1990-dina",
+      "dataset": "Tatsuoka1990",
+      "derivation": "original",
+      "model": "DINA",
+      "passed": true,
+      "dimensions": {
+        "respondents": 536,
+        "items": 20,
+        "attributes": 8,
+        "latent_classes": 256,
+        "missing_responses": 0
+      },
+      "reference": {
+        "iterations": 1170,
+        "log_likelihood": -4402.2997153682945
+      },
+      "full_package": {
+        "iterations": 1170,
+        "log_likelihood": -4402.2997153683073,
+        "raw_log_likelihood_with_neutral_row_tags": -8117.5686031696141,
+        "neutral_row_tag_log_likelihood_constant": -3715.2688878013068,
+        "neutral_row_tag_items": 10,
+        "neutral_row_tags_preserved_all_rows": true,
+        "max_absolute_neutral_item_probability_difference": 0,
+        "warnings": []
+      },
+      "differences": {
+        "max_absolute_item_probability": 2.2204460492503131e-16,
+        "max_absolute_prior_probability": 5.5511151231257827e-17,
+        "absolute_log_likelihood": 1.2732925824820995e-11,
+        "max_absolute_eap_probability": 7.6605388699135801e-15
+      },
+      "agreements": {
+        "iterations_exact": true,
+        "attribute_pattern_order_exact": true,
+        "direct_map_class_fraction": 1,
+        "direct_mle_class_fraction": 1,
+        "personparm_map_strict_fraction": 0.59514925373134331,
+        "personparm_mle_strict_fraction": 0.60074626865671643,
+        "personparm_map_tie_compatible_fraction": 1,
+        "personparm_mle_tie_compatible_fraction": 1,
+        "personparm_eap_classification_fraction": 1
+      }
+    },
+    {
+      "id": "ecpe-gdina-missing",
+      "dataset": "ECPE",
+      "derivation": "deterministic-missing-mask-over-original-responses",
+      "model": "GDINA",
+      "passed": true,
+      "dimensions": {
+        "respondents": 2922,
+        "items": 28,
+        "attributes": 3,
+        "latent_classes": 8,
+        "missing_responses": 812
+      },
+      "reference": {
+        "iterations": 764,
+        "log_likelihood": -42333.612570053934
+      },
+      "full_package": {
+        "iterations": 764,
+        "log_likelihood": -42333.612570053876,
+        "raw_log_likelihood_with_neutral_row_tags": -66638.125309207797,
+        "neutral_row_tag_log_likelihood_constant": -24304.512739153921,
+        "neutral_row_tag_items": 12,
+        "neutral_row_tags_preserved_all_rows": true,
+        "max_absolute_neutral_item_probability_difference": 0,
+        "warnings": []
+      },
+      "differences": {
+        "max_absolute_item_probability": 1.8873791418627661e-15,
+        "max_absolute_prior_probability": 1.3877787807814457e-15,
+        "absolute_log_likelihood": 5.8207660913467407e-11,
+        "max_absolute_eap_probability": 1.1546319456101628e-14
+      },
+      "agreements": {
+        "iterations_exact": true,
+        "attribute_pattern_order_exact": true,
+        "direct_map_class_fraction": 1,
+        "direct_mle_class_fraction": 1,
+        "personparm_map_strict_fraction": 1,
+        "personparm_mle_strict_fraction": 1,
+        "personparm_map_tie_compatible_fraction": 1,
+        "personparm_mle_tie_compatible_fraction": 1,
+        "personparm_eap_classification_fraction": 1
+      }
+    }
+  ]
+}

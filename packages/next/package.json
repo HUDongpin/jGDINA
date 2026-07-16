@@ -1,0 +1,51 @@
+{
+  "name": "@jgdina/next",
+  "version": "1.0.0-rc.1",
+  "description": "Next.js App Router adapters for standalone jGDINA fitting in Node workers or browser workers.",
+  "license": "GPL-3.0-only",
+  "engines": { "node": ">=20" },
+  "publishConfig": { "access": "public" },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "UPSTREAM.md"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/client.ts --format esm --dts --sourcemap --clean --splitting",
+    "clean": "rm -rf dist",
+    "prepack": "node ../../scripts/package-license.mjs prepare .",
+    "postpack": "node ../../scripts/package-license.mjs clean .",
+    "test": "vitest run --config ../../vitest.config.ts packages/next/test",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@jgdina/browser": "1.0.0-rc.1",
+    "@jgdina/core": "1.0.0-rc.1",
+    "@jgdina/node": "1.0.0-rc.1"
+  },
+  "peerDependencies": {
+    "next": ">=15 <17"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "validation/real-data/compare.mjs",
+  "deterministic": true,
+  "passed": true,
+  "upstream": {
+    "package": "GDINA",
+    "version": "2.12.3",
+    "frozen_commit": "ac5eca223a1ee32b6c2f595cfeaef9b330451425",
+    "estimator": "exact-fast-kernel-src/Lik2.cpp",
+    "full_package_loaded": false,
+    "scoring_surface": "independent-base-R-equations-audited-against-the-fast-kernel"
+  },
+  "tolerances": {
+    "item_probability_absolute": 1e-8,
+    "prior_probability_absolute": 1e-8,
+    "log_likelihood_absolute": 1e-7,
+    "eap_probability_absolute": 1e-8,
+    "iterations": "exact",
+    "discrete_classifications": "exact"
+  },
+  "cases": [
+    {
+      "id": "ecpe-gdina",
+      "dataset": "ECPE",
+      "derivation": "original",
+      "model": "GDINA",
+      "dimensions": {
+        "respondents": 2922,
+        "items": 28,
+        "attributes": 3,
+        "latent_classes": 8,
+        "missing_responses": 0
+      },
+      "passed": true,
+      "r": {
+        "converged": true,
+        "iterations": 1639,
+        "logLikelihood": -42738.56047843581
+      },
+      "jgdina": {
+        "backendId": "js",
+        "converged": true,
+        "iterations": 1639,
+        "logLikelihood": -42738.56047843579,
+        "missingResponseCount": 0
+      },
+      "differences": {
+        "maxAbsoluteItemProbability": 6.661338147750939e-14,
+        "maxAbsolutePriorProbability": 1.2045919817182948e-14,
+        "absoluteInitialLogLikelihood": 0,
+        "absoluteLogLikelihood": 1.4551915228366852e-11,
+        "maxAbsoluteEapProbability": 1.1435297153639112e-13
+      },
+      "agreements": {
+        "iterationsExact": true,
+        "convergedExact": true,
+        "attributePatternOrderExact": true,
+        "initializationExact": true,
+        "missingCountExact": true,
+        "mapClassFraction": 1,
+        "mleClassFraction": 1,
+        "eapClassificationFraction": 1
+      }
+    },
+    {
+      "id": "ecpe-dino",
+      "dataset": "ECPE",
+      "derivation": "original",
+      "model": "DINO",
+      "dimensions": {
+        "respondents": 2922,
+        "items": 28,
+        "attributes": 3,
+        "latent_classes": 8,
+        "missing_responses": 0
+      },
+      "passed": true,
+      "r": {
+        "converged": true,
+        "iterations": 653,
+        "logLikelihood": -42920.37273743464
+      },
+      "jgdina": {
+        "backendId": "js",
+        "converged": true,
+        "iterations": 653,
+        "logLikelihood": -42920.37273743464,
+        "missingResponseCount": 0
+      },
+      "differences": {
+        "maxAbsoluteItemProbability": 5.88418203051333e-15,
+        "maxAbsolutePriorProbability": 1.0103029524088925e-14,
+        "absoluteInitialLogLikelihood": 0,
+        "absoluteLogLikelihood": 0,
+        "maxAbsoluteEapProbability": 3.991251773527438e-14
+      },
+      "agreements": {
+        "iterationsExact": true,
+        "convergedExact": true,
+        "attributePatternOrderExact": true,
+        "initializationExact": true,
+        "missingCountExact": true,
+        "mapClassFraction": 1,
+        "mleClassFraction": 1,
+        "eapClassificationFraction": 1
+      }
+    },
+    {
+      "id": "tatsuoka1990-dina",
+      "dataset": "Tatsuoka1990",
+      "derivation": "original",
+      "model": "DINA",
+      "dimensions": {
+        "respondents": 536,
+        "items": 20,
+        "attributes": 8,
+        "latent_classes": 256,
+        "missing_responses": 0
+      },
+      "passed": true,
+      "r": {
+        "converged": true,
+        "iterations": 1170,
+        "logLikelihood": -4402.2997153682945
+      },
+      "jgdina": {
+        "backendId": "js",
+        "converged": true,
+        "iterations": 1170,
+        "logLikelihood": -4402.299715368304,
+        "missingResponseCount": 0
+      },
+      "differences": {
+        "maxAbsoluteItemProbability": 1.1007861289158427e-13,
+        "maxAbsolutePriorProbability": 1.887379141862766e-15,
+        "absoluteInitialLogLikelihood": 0,
+        "absoluteLogLikelihood": 9.094947017729282e-12,
+        "maxAbsoluteEapProbability": 4.836409051023338e-13
+      },
+      "agreements": {
+        "iterationsExact": true,
+        "convergedExact": true,
+        "attributePatternOrderExact": true,
+        "initializationExact": true,
+        "missingCountExact": true,
+        "mapClassFraction": 1,
+        "mleClassFraction": 1,
+        "eapClassificationFraction": 1
+      }
+    },
+    {
+      "id": "ecpe-gdina-missing",
+      "dataset": "ECPE",
+      "derivation": "deterministic-missing-mask-over-original-responses",
+      "model": "GDINA",
+      "dimensions": {
+        "respondents": 2922,
+        "items": 28,
+        "attributes": 3,
+        "latent_classes": 8,
+        "missing_responses": 812
+      },
+      "passed": true,
+      "r": {
+        "converged": true,
+        "iterations": 764,
+        "logLikelihood": -42333.612570053934
+      },
+      "jgdina": {
+        "backendId": "js",
+        "converged": true,
+        "iterations": 764,
+        "logLikelihood": -42333.612570053956,
+        "missingResponseCount": 812
+      },
+      "differences": {
+        "maxAbsoluteItemProbability": 7.771561172376096e-15,
+        "maxAbsolutePriorProbability": 1.9984014443252818e-15,
+        "absoluteInitialLogLikelihood": 0,
+        "absoluteLogLikelihood": 2.1827872842550278e-11,
+        "maxAbsoluteEapProbability": 3.086420008457935e-14
+      },
+      "agreements": {
+        "iterationsExact": true,
+        "convergedExact": true,
+        "attributePatternOrderExact": true,
+        "initializationExact": true,
+        "missingCountExact": true,
+        "mapClassFraction": 1,
+        "mleClassFraction": 1,
+        "eapClassificationFraction": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Meta
+doc
+.Rproj.user
+.Rhistory
+.RData
+..RCheck
+src/*.o
+src/*.so
+src/*.dll
+inst/doc
+src-i386
+src-x64
+tests/*
+!tests/testthat/
+!tests/testthat/*.R
+/doc/
+/Meta/
+
+# OS-generated files
+.DS_Store
+**/.DS_Store
+._*

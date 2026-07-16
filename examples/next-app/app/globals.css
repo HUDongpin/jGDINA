@@ -1,0 +1,34 @@
+:root {
+  color-scheme: light dark;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 52rem;
+  padding: 3rem 1.25rem;
+}
+
+a {
+  color: #3977d2;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  padding: 0.6rem 0.9rem;
+}
+
+pre {
+  background: color-mix(in srgb, CanvasText 8%, Canvas);
+  border-radius: 0.5rem;
+  max-height: 32rem;
+  overflow: auto;
+  padding: 1rem;
+  white-space: pre-wrap;
+}

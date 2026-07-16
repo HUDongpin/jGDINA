@@ -1,0 +1,38 @@
+{
+  "name": "@jgdina/kernels-js",
+  "version": "1.0.0-rc.1",
+  "description": "Pure TypeScript numerical backend for jGDINA.",
+  "license": "GPL-3.0-only",
+  "engines": { "node": ">=20" },
+  "publishConfig": { "access": "public" },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "UPSTREAM.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "clean": "rm -rf dist",
+    "prepack": "node ../../scripts/package-license.mjs prepare .",
+    "postpack": "node ../../scripts/package-license.mjs clean .",
+    "test": "vitest run --config ../../vitest.config.ts packages/kernels-js/test",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@jgdina/core": "1.0.0-rc.1"
+  }
+}

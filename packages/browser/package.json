@@ -1,0 +1,40 @@
+{
+  "name": "@jgdina/browser",
+  "version": "1.0.0-rc.1",
+  "description": "Browser Web Worker adapter for standalone jGDINA fitting.",
+  "license": "GPL-3.0-only",
+  "engines": { "node": ">=20" },
+  "publishConfig": { "access": "public" },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "UPSTREAM.md"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./worker": "./dist/worker-entry.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/worker-entry.ts --format esm --dts --sourcemap --clean --splitting",
+    "clean": "rm -rf dist",
+    "prepack": "node ../../scripts/package-license.mjs prepare .",
+    "postpack": "node ../../scripts/package-license.mjs clean .",
+    "test": "vitest run --config ../../vitest.config.ts packages/browser/test",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@jgdina/core": "1.0.0-rc.1",
+    "@jgdina/kernels-js": "1.0.0-rc.1",
+    "@jgdina/worker-protocol": "1.0.0-rc.1"
+  }
+}

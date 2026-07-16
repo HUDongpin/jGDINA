@@ -1,0 +1,73 @@
+#'@title Calculate classification accuracy
+#'
+#' @description
+#' This function calculates test-, pattern- and attribute-level classification accuracy indices based on GDINA estimates from
+#' the \code{GDINA} function using approaches in Iaconangelo (2017) and Wang, Song, Chen, Meng, and Ding (2015).
+#' It is only applicable for dichotomous attributes.
+#'
+#' @param GDINA.obj estimated GDINA object returned from \code{\link{GDINA}}
+#' @param what what attribute estimates are used? Default is \code{"MAP"}.
+#'
+#' @return a list with elements
+#' \describe{
+#' \item{tau}{estimated overall pattern-level classification accuracy, see Iaconangelo (2017)}
+#' \item{tau_l}{estimated pattern-level classification accuracy, see Iaconangelo (2017)}
+#' \item{tau_k}{estimated attribute-level classification accuracy, see Wang, et al (2015)}
+#' \item{CCM}{Conditional classification matrix, see Iaconangelo (2017)}
+#' \item{gamma_k}{Wang et al.'s (2015) attribute-level classification consistency estimator}
+#' \item{gamma}{estimated overall pattern-level classification consistency}
+#' }
+#'
+#' @author Wenchao Ma, The University of Minnesota, \email{wma@umn.edu}
+#' @references
+#'
+#' Iaconangelo, C.(2017). \emph{Uses of Classification Error Probabilities in the Three-Step Approach to Estimating Cognitive Diagnosis Models.} (Unpublished doctoral dissertation). New Brunswick, NJ: Rutgers University.
+#'
+#' Ma, W., & de la Torre, J. (2020). GDINA: An R Package for Cognitive Diagnosis Modeling. \emph{Journal of Statistical Software, 93(14)}, 1-26.
+#'
+#' Wang, W., Song, L., Chen, P., Meng, Y., & Ding, S. (2015). Attribute-Level and Pattern-Level Classification Consistency and Accuracy Indices for Cognitive Diagnostic Assessment.
+#' \emph{Journal of Educational Measurement, 52} , 457-476.
+#'
+#'
+#' @examples
+#'\dontrun{
+#' dat <- realdata_ECPE$dat
+#' Q <- realdata_ECPE$Q
+#' fit <- GDINA(dat = dat, Q = Q, model = "GDINA")
+#' fit
+#' CA(fit)
+#'
+#'
+#'
+#' }
+#'@export
+
+
+
+
+CA <- function(GDINA.obj,what="MAP"){
+  if(extract(GDINA.obj, "ngroup")!=1) {
+    stop("classification accuracy is only applicable for single group analysis.", call. = FALSE)
+  }
+  p_c <- extract(GDINA.obj,"posterior.prob")
+  pp <- personparm(GDINA.obj,what = what)
+  if(what=="MAP"||what=="MLE"){
+    if(any(pp[,ncol(pp)])) warning(paste0(what," estimates for some individuals have multiple modes.",collapse = ""),call. = FALSE)
+    pp <- as.matrix(pp[,-ncol(pp)])
+  }
+  mp <- personparm(GDINA.obj,what = "mp",digits = 15)
+  CCM<- CM(GDINA.obj,classification = what,matrixtype = "profile")$profile_classification
+  tau_c <- diag(CCM)
+  tau <- sum(tau_c*c(p_c))
+  tau_k <- colMeans(pp*mp+(1-pp)*(1-mp))
+  names(tau_c) <- rownames(CCM)
+
+  indp <- exp(indlogPost(GDINA.obj))
+  #consistency indices - Wang et al
+  gamma_k <- colMeans(mp * mp + (1-mp) * (1-mp))
+  gamma <- sum(indp * indp)/nrow(indp)
+  ret <- list(tau=tau,tau_l=tau_c,tau_k=tau_k,CCM = CCM,
+              gamma_k=gamma_k,gamma=gamma,GDINA.obj=GDINA.obj)
+  class(ret) <- "CA"
+  return(ret)
+}

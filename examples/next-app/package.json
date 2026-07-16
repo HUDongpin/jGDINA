@@ -1,0 +1,35 @@
+{
+  "name": "jgdina-next-example",
+  "version": "1.0.0-rc.1",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@jgdina/browser": "file:../../packages/browser",
+    "@jgdina/core": "file:../../packages/core",
+    "@jgdina/kernels-js": "file:../../packages/kernels-js",
+    "@jgdina/next": "file:../../packages/next",
+    "@jgdina/node": "file:../../packages/node",
+    "@jgdina/worker-protocol": "file:../../packages/worker-protocol",
+    "next": "^16.2.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}
