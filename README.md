@@ -49,17 +49,42 @@ AICc uses the conventional `AIC + 2q(q+1)/(N-q-1)` definition and is `null`
 when `N <= q + 1`. This intentionally corrects the different AICc expression
 in the frozen GDINA 2.12.3 source; AIC and BIC remain oracle-parity fields.
 
+## Install from npm
+
+The public release candidate is
+[`1.0.0-rc.1`](https://www.npmjs.com/package/jgdina/v/1.0.0-rc.1). All seven
+packages are published to npm's `next` dist-tag; `latest` is intentionally
+unchanged. Install `@next` (or pin the exact RC version) until a stable release
+is announced.
+
+Choose the runtime entry point for your application—its internal jGDINA
+dependencies are installed automatically:
+
+```sh
+# Direct, in-process TypeScript engine
+npm install jgdina@next
+
+# Node.js worker_threads adapter
+npm install @jgdina/node@next
+
+# Browser Web Worker adapter
+npm install @jgdina/browser@next
+
+# Next.js App Router server and client adapters
+npm install @jgdina/next@next
+```
+
 ## Packages
 
-| Package | Purpose |
-|---|---|
-| `jgdina` | Standalone default TypeScript engine |
-| `@jgdina/core` | Public contracts, validation, backend interface, memory guards |
-| `@jgdina/kernels-js` | Typed-array reference kernels and closed-form EM |
-| `@jgdina/browser` | Dedicated browser Worker adapter |
-| `@jgdina/node` | Node `worker_threads` backend and reusable pool |
-| `@jgdina/next` | Next.js Route Handler and client entry points |
-| `@jgdina/worker-protocol` | Shared typed-array worker wire protocol |
+| Package | Purpose | Install when |
+|---|---|---|
+| [`jgdina`](https://www.npmjs.com/package/jgdina) | Standalone default TypeScript engine | fitting directly on the calling thread |
+| [`@jgdina/core`](https://www.npmjs.com/package/@jgdina/core) | Public contracts, validation, backend interface, memory guards | implementing a custom backend or advanced integration |
+| [`@jgdina/kernels-js`](https://www.npmjs.com/package/@jgdina/kernels-js) | Typed-array reference kernels and closed-form EM | using the low-level pure-JS backend directly |
+| [`@jgdina/browser`](https://www.npmjs.com/package/@jgdina/browser) | Dedicated browser Worker adapter | fitting in a browser or static client application |
+| [`@jgdina/node`](https://www.npmjs.com/package/@jgdina/node) | Node `worker_threads` backend and reusable pool | fitting from a Node.js server or process |
+| [`@jgdina/next`](https://www.npmjs.com/package/@jgdina/next) | Next.js Route Handler and client entry points | integrating with a Next.js App Router application |
+| [`@jgdina/worker-protocol`](https://www.npmjs.com/package/@jgdina/worker-protocol) | Shared typed-array worker wire protocol | implementing a compatible custom worker transport |
 
 ## Standalone usage
 
