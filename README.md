@@ -280,6 +280,10 @@ psychometrician. The required review, result-reporting checklist, and current
 diagnostics gap are documented in
 [Statistical responsibility](./docs/statistical-responsibility.md).
 
+## Maintainer
+
+- [HUDongpin](https://github.com/HUDongpin)
+
 ## License
 
 jGDINA is distributed under the GNU General Public License version 3 only.
