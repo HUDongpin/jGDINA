@@ -1526,7 +1526,7 @@ function validateOracleReference(reference, validated, requestedMode, result) {
   );
 }
 
-async function compareWithOracle(result, validated, reference, tolerances, requestedMode) {
+async function compareWithOracle(result, validated, reference, tolerances) {
   const expected = reference.expected;
   const packageFingerprints = await fingerprintROraclePackages(
     reference.oracle.toolchain.packages,
@@ -2111,7 +2111,6 @@ async function main() {
         validated,
         reference,
         normalized.tolerances,
-        options.oracle,
       );
     }
     if (!sensitiveCleaned) await cleanupSensitiveDirectory();

@@ -3,8 +3,6 @@ import { deltaToProbabilities } from "./helpers.js";
 import type { CompiledModel, ParameterState } from "./internal.js";
 import { deriveStartSeed, Xoshiro128StarStar } from "./random.js";
 
-export const DEFAULT_SMALL_SAMPLE_CORRECTION = [0.0005, 0.001] as const;
-
 export function initialState(
   input: ValidatedFitInput,
   model: CompiledModel,
